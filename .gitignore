@@ -1,4 +1,5 @@
 simulation+QA/
+archive/
 .cache/
 .DS_Store
 *.pyc

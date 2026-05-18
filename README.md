@@ -1,178 +1,161 @@
-# 🚀 OneMillion Builder System
+# OneMillion
 
-_Created by [Sid Dixit](https://onemillion.build)_
+**Build a real AI-native product in 18 days. Free, forever. Anyone.**
 
----
+You're not taking a course. You're entering an apprenticeship.
 
-You've seen people ship full products in days using AI. They have Claude Code wired up with agents for every phase — ideation, spec, design, build, test, security, deployment, launch. You try to copy it. You're missing half the context. Three hours in, you're debugging a system you don't understand.
+In 18 days, working 1-2 hours per day, you will ship a real software product to the internet. It will have your name on it. It will be at your own domain. Real people will use it. You will walk out a **Builder**, with a permanent number — Builder #N — listed on this repo forever.
 
-**This fixes that.**
-
-- **18 days, one phase at a time.** No information overload. You build one thing each day and understand it before moving on.
-- **20 minutes per day.** Short enough to fit into any schedule.
-- **A real product, shipped to production.** By the end, you'll have a working app live on the internet — built by you, with AI as your co-founder.
-- **Free forever.** No subscriptions. Bring your own API key.
-- **Uses the tool to learn the tool.** The agents read the course files and guide you through building. Meta and effective.
+You don't need to know how to code. The AI writes the code. Your job is to think clearly, make good decisions, and ship.
 
 ---
 
-## 🧠 What Is This?
+## Who This Is For
 
-**OneMillion Builder System** is an open-source collection of Claude Code agents that guide you through a complete product development lifecycle — from raw idea to shipped, marketed product.
+**Everyone.** Every age. Every background. Every continent.
 
-Nine specialized agents. One orchestrator. Eighteen days.
+- **Executive Assistants** who've never opened a terminal
+- **Product Managers** who've shipped specs but never built a product end-to-end
+- **Engineers** who want to master agentic SDLC and the new way of building
+- **Yoga teachers, nurses, designers, retirees, career-changers** — yes, all of you
+
+If you can use Google Docs, you can do this. The bootcamp has graduated builders on three continents who'd never written a line of code in their lives. They shipped real products. So will you.
+
+**Time budget by experience:**
+- Never coded: ~1.5–2 hours/day
+- Some technical background: ~1–1.5 hours/day
+- Engineer: 30–60 minutes/day
+
+You finish in 18 days regardless. Honest about the variance.
+
+---
+
+## What You'll Build
+
+**One real AI-native SaaS product.** Deployed. Secure. With auth, a database, an AI feature, monitoring, a custom domain, a landing page, and at least one real user.
+
+**Week 1 — Foundation.** You ship a working web app with auth and a core feature.
+
+**Week 2 — Make It AI.** You add real AI features — streaming, tool use, retrieval — into your app.
+
+**Week 3 — Ship & Sell.** You harden it for production, get your custom domain, build a landing page, and put it in front of real users.
+
+**Day 18 — First Voyage.** You demo your product (live or via Loom). On approval, you become **Builder #N** — your permanent, sequential, public number. Listed forever on the Builder Wall.
+
+---
+
+## How It Works
+
+**Two ways to take it. Same content. Different rhythm.**
+
+### Self-Serve (free, anytime)
+This GitHub repo IS the course. Clone it, work through the 18 days at your own pace, submit your work for verification, claim your Builder number. Start any day. Finish whenever.
+
+### Weekend Cohorts (free, scheduled)
+Sid runs live cohorts every few months. Saturday 2-hour session (live lecture + Q&A + Sid building alongside) + 1 hour/day of self-paced work + community Slack. Three weekends + Demo Day. **Apply at [cohort/README.md](./cohort/README.md).**
+
+The first 100 builders ever get **Founding Builder** status — permanent badge, direct line to Sid, and a personal intro to one investor or hiring manager upon graduation.
+
+---
+
+## What This Costs
+
+**$0 in tuition. Forever.**
+
+You'll spend $0–20 over the 18 days on:
+- AI API credits (~$5–15 from Anthropic — Claude calls during the build)
+- Optional custom domain (~$10/year — only if you want yourname.com)
+- Everything else (Supabase, Vercel, GitHub, Cursor's free tier) is free
+
+Full breakdown: [cost-transparency.md](./cost-transparency.md).
+
+---
+
+## Start Here
+
+1. Read [the Manifesto](./MANIFESTO.md) — why this exists, why now
+2. Run [getting-started.md](./getting-started.md) — install your tools (Mac + Windows + Codespaces fallback)
+3. Get your [API keys](./getting-your-api-key.md) — Anthropic + Supabase
+4. Pick your editor: [tools/README.md](./tools/README.md) — Claude Code, Cursor, Antigravity, or any AI builder works
+5. Open [Week 1, Day 1](./week-1-foundation/day-01-vision/learn.md) — your first day starts here
+
+Or, if you want the live community + accountability, [apply to a cohort](./cohort/README.md).
+
+---
+
+## The 18 Days At A Glance
 
 ```
-💡 IDEA → 📝 SPEC → 🏗️ PLAN → 🎨 DESIGN → 💻 BUILD → 🧪 TEST → 🔒 GUARD → 🚀 SHIP → 📣 SELL
+WEEK 1 — FOUNDATION
+  Day 1: Vision + Mental Map      (no code yet)
+  Day 2: Problem + Mom Test       (no code yet)
+  Day 3: Write Your PRD           (lock scope)
+  Day 4: Stack + First Deploy     (hello world live)
+  Day 5: Auth + Database          (login working)
+  Day 6: Core Feature             (your main thing built)
+
+WEEK 2 — MAKE IT AI
+  Day 7: Pick Your AI Feature
+  Day 8: First AI Call
+  Day 9: Streaming UI
+  Day 10: Tool Use (AI takes actions)
+  Day 11: RAG (AI reads user data)
+  Day 12: Lock the AI Feature
+
+WEEK 3 — SHIP & SELL
+  Day 13: Production Hygiene
+  Day 14: Custom Domain
+  Day 15: Monitoring
+  Day 16: Landing Page
+  Day 17: First 10 Users
+  Day 18: Demo Day → Builder #N
 ```
 
-Each agent knows its job deeply. The orchestrator knows the whole picture.
+Full day-by-day with time estimates: [week-1-foundation/README.md](./week-1-foundation/README.md).
 
 ---
 
-## 🛠️ What You Need
+## What You Walk Out With
 
-- [Claude Code](https://claude.ai/code) (CLI or VS Code extension)
-- An [Anthropic API key](https://console.anthropic.com) (Claude Sonnet is sufficient)
-- Node.js 20+ and Python 3.11+ (the course walks you through this)
-- 20 minutes per day for 18 days
+- A live SaaS at **yourapp.com** (yes, yours, with your name on it)
+- A **GitHub repo** showing 18 days of commits — proof you built it
+- A **Builder number** — Builder #N — sequential and permanent
+- A **public profile** at onemillion.build/builders/[your-number] linking to your product, your commits, your demo
+- A **LinkedIn badge** with verifiable credential
+- The ability to build any product, anytime, from scratch — for the rest of your life
 
----
-
-## 📚 Course Days
-
-| Day | What You Build |
-|-----|----------------|
-| [Day 1: Install & Configure](./course/day-01/learn.md) | Claude Code running with OneMillion agents loaded |
-| [Day 2: Understand the System](./course/day-02/learn.md) | The 9-step flow, orchestrator logic, and how agents hand off |
-| [Day 3: Capture Your Idea](./course/day-03/learn.md) | A real PRD from a single sentence — using the IDEA agent |
-| [Day 4: Refine Your Vision](./course/day-04/learn.md) | Edit your PRD, define scope, and lock your MVP hypothesis |
-| [Day 5: Engineering Requirements](./course/day-05/learn.md) | A CRUD chain for every entity using the SPEC agent |
-| [Day 6: Validate the Spec](./course/day-06/learn.md) | Catch ambiguities before they become bugs |
-| [Day 7: Design Your Product](./course/day-07/learn.md) | Screen specs, design system, and seed data using DESIGN agent |
-| [Day 8: Refine the Design](./course/day-08/learn.md) | HTML mockup preview and design iteration |
-| [Day 9: Architect the System](./course/day-09/learn.md) | Architecture doc and sprint briefs using the PLAN agent |
-| [Day 10: Validate the Plan](./course/day-10/learn.md) | Stress-test architecture before writing a single line of code |
-| [Day 11: Build — Foundation](./course/day-11/learn.md) | Sprint S0: repo, DB, health endpoint, auth scaffold |
-| [Day 12: Build — Auth](./course/day-12/learn.md) | Sprint S1: register, login, JWT, protected routes |
-| [Day 13: Build — Core Feature](./course/day-13/learn.md) | Sprint S2: your product's primary feature, end to end |
-| [Day 14: Build — Remaining Features](./course/day-14/learn.md) | Sprint S3+: finish the MVP feature set |
-| [Day 15: Test Everything](./course/day-15/learn.md) | Backend tests, E2E Playwright, accessibility — using TEST agent |
-| [Day 16: Security Audit](./course/day-16/learn.md) | OWASP Top 10, secrets scan, SAST — using GUARD agent |
-| [Day 17: Ship to Production](./course/day-17/learn.md) | Deploy backend + frontend, smoke tests, monitoring — SHIP agent |
-| [Day 18: Launch](./course/day-18/learn.md) | Landing copy, social posts, SEO, investor deck — SELL agent |
+That last one is the real prize. The product is the proof. The skill is the gift.
 
 ---
 
-## 🚀 Quick Start (5 minutes)
+## The Five Pillars (What You're Actually Learning)
 
-```bash
-# 1. Clone this repo
-git clone https://github.com/your-org/onemillion-builder
-cd onemillion-builder
+Threaded through every day. By Day 18 you don't just have a product — you know **how to think about building with AI.** That's what makes the difference between someone who can use AI and someone who can ship with it.
 
-# 2. Copy agents to Claude config
-cp -r agents/* ~/.claude/agents/
-cp -r skills/* ~/.claude/skills/
+1. **Spec before code.** Never let AI generate without a spec it can validate against.
+2. **Multi-agent decomposition.** Small agents with clear roles beat one mega-prompt.
+3. **Validation gates.** Every phase has acceptance criteria. The AI checks itself.
+4. **Production hygiene from day 1.** Auth, security, monitoring are foundation, not afterthought.
+5. **The human review loop.** AI proposes. You dispose. Spot-check, don't trust blindly.
 
-# 3. Open Claude Code in your project directory
-mkdir my-product && cd my-product
-claude
-
-# 4. Start the flow
-# Type: "I want to build [your idea]"
-# The orchestrator will take it from there.
-```
-
-Or follow the [18-day course](./course/README.md) for the structured path.
+This is **agentic SDLC** — the new way to build software. The five pillars are the framework. The 18 days are how you internalize them.
 
 ---
 
-## 🤖 The 9 Agents
+## License
 
-| Agent | Role | When It Runs |
-|-------|------|--------------|
-| **Orchestrator** | Outer-loop brain — routes, quality-checks, adapts | Always active |
-| **IDEA** | Startup Product Advisor — PRD from any input | Day 3-4 |
-| **SPEC** | Principal PM — CRUD chains, acceptance criteria | Day 5-6 |
-| **DESIGN** | Lead Designer — design system, screens, seed data | Day 7-8 |
-| **PLAN** | Staff Architect — architecture doc, sprint briefs | Day 9-10 |
-| **BUILD** | Senior Engineer — executes one sprint at a time | Day 11-14 |
-| **TEST** | VP QA — backend tests, E2E, accessibility | Day 15 |
-| **GUARD** | Security Engineer — OWASP Top 10, secrets, SAST | Day 16 |
-| **SHIP** | DevOps — deploy, verify, monitor, rollback test | Day 17 |
-| **SELL** | Growth Marketing — copy, social posts, SEO, deck | Day 18 |
-
-**Anytime helpers:** ASK (questions), DEBUG (bugs), REFACTOR (code cleanup), REVIEW (spec drift)
+MIT. Free to use, fork, remix, share. If you build on this, credit the source.
 
 ---
 
-## 🏗️ The Locked Tech Stack
+## Who Made This
 
-Every product built with this system uses the same proven stack — optimized for zero DevOps overhead:
+Sid Dixit. Personal mission: teach one million people to build with AI — free, forever.
 
-- **Frontend:** Next.js + TypeScript + MUI (Material Design 3)
-- **Backend:** Python + FastAPI + Pydantic v2
-- **Database:** MongoDB Atlas (free tier)
-- **Auth:** JWT + Argon2
-- **Deploy:** Vercel (frontend) + Railway (backend)
-- **Testing:** pytest + Playwright + axe-core
-- **Monitoring:** Sentry (free tier)
-
-Three infrastructure services. Proven at scale. Zero migration overhead.
+Follow the build in public on [LinkedIn](https://linkedin.com/in/siddixit). The course is the byproduct of Sid building publicly, narrated, with you building alongside.
 
 ---
 
-## 📁 Repository Structure
+> *The million starts with one. Are you one of them?*
 
-```
-onemillion-builder/
-├── README.md              ← You are here
-├── CLAUDE.md              ← Wires agents into Claude Code
-├── agents/                ← 17 specialist agents
-│   ├── orchestrator.md
-│   ├── idea.md
-│   ├── spec.md
-│   └── ...
-├── skills/                ← Shared reference skills
-│   ├── tech_stack/
-│   ├── checklist_security/
-│   └── ...
-├── course/                ← 18-day structured course
-│   ├── README.md
-│   ├── day-01/
-│   └── ...
-└── certification/         ← Completion criteria + badge
-```
-
----
-
-## 🎓 Certification
-
-Complete the 18-day course and ship a real product to get your **OneMillion Builder** certificate. See [certification/README.md](./certification/README.md).
-
----
-
-## 🤝 Contributing
-
-- Found a bug in an agent? Open an issue or PR.
-- Built something cool? Share it — tag `#OneMillion` on X.
-- Want to add a skill? Check the [skill format](./skills/) and submit a PR.
-
----
-
-## 📄 License
-
-MIT. Free to use, fork, and build on. If you share it, credit the source.
-
----
-
-## 💬 Community
-
-- **X / Twitter:** [@onemillionbuild](https://x.com/onemillionbuild)
-- **Website:** [onemillion.build](https://onemillion.build)
-- **Docs:** [docs.onemillion.build](https://docs.onemillion.build)
-
----
-
-_The million starts with one. Let's build._
+→ Start: [The Manifesto](./MANIFESTO.md) · [Getting Started](./getting-started.md) · [Day 1](./week-1-foundation/day-01-vision/learn.md)
