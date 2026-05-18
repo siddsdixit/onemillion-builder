@@ -94,9 +94,28 @@ Then your idea was bad and you just saved yourself 18 days. Pick a different pro
 
 ---
 
+## Two Paths — Pick Yours
+
+We learned in simulations that the original Day 2 had too much friction for non-networked builders. So we offer two paths. Both count.
+
+### Full Path (RECOMMENDED if you can)
+**3 conversations with target users you don't know well.**
+Cold DMs to strangers. Friends-of-friends. Reddit posters. People who clearly have the problem.
+
+This produces the strongest evidence and the deepest insight.
+
+### Light Path (OK if you can't do Full)
+**2 internal conversations + yourself = 3.**
+
+"Internal" means: people you already know who have the problem. A coworker. A friend who fits the target. A family member if they genuinely have the problem (NOT your mom unless she's actually a freelance designer or whatever you're building for).
+
+"Yourself" means: you write up your own experience of the problem — when did it happen, what did you try, what did it cost you. You count as ONE conversation if you have the problem firsthand.
+
+**If you take Light Path:** add a stretch goal — do 3 cold conversations in **Week 2** as homework. The validation gets deeper. But don't let Day 2 block you.
+
 ## Today's Assignment
 
-Have **3 conversations today.** (You'll do 2 more before Day 3.)
+Have **3 conversations today** (Full OR Light path — your call).
 
 For each conversation, write a record in `.onemillion/notes.md` with:
 

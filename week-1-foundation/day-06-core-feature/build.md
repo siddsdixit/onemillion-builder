@@ -123,9 +123,9 @@ If all this works locally, you're 70% done.
 
 ---
 
-## Step 5: Critical — Test As A SECOND USER (10 min)
+## Step 5: 🚨 SECURITY GATE — Test As A SECOND USER (10 min)
 
-This is the test most builders skip. Don't skip it.
+**⛔ DO NOT PUSH TO PRODUCTION UNTIL THIS PASSES.** This is the security gate. If you skip it, you risk shipping an app where any user can see every other user's data. That's a real security breach, real legal exposure, real reputational damage. Take 10 minutes. Test.
 
 1. Open an incognito/private window
 2. Go to your live URL — sign up as a NEW user (`test2@example.com`)

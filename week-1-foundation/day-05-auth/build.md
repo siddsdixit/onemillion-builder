@@ -207,6 +207,28 @@ Click **Review** → **Save**.
 
 ---
 
+## Step 8b: Pre-Deploy Checklist (MANDATORY)
+
+**STOP. Before you push to git, complete this checklist.**
+
+The most common Day 5 failure mode: works locally, breaks in production silently. This checklist catches it before you push.
+
+- [ ] **`.env.local` exists locally** with both:
+  - `NEXT_PUBLIC_SUPABASE_URL=https://...`
+  - `NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJ...`
+
+- [ ] **Vercel has the SAME env vars** (Settings → Environment Variables in your Vercel project dashboard). Take a screenshot or screenshot-equivalent visual scan: BOTH names visible.
+
+- [ ] **`.env.local` is gitignored.** Run `git status` — you should NOT see `.env.local` in the list of files to be committed. If you do: `echo ".env.local" >> .gitignore`.
+
+- [ ] **Supabase email confirmation is OFF** (for dev only). Supabase dashboard → Authentication → Providers → Email → "Confirm email" toggle: OFF.
+
+- [ ] **RLS is enabled on your first table.** Supabase dashboard → Table Editor → click your table → green "RLS enabled" indicator.
+
+- [ ] **RLS policy exists.** Same screen → Policies → at least one policy referencing `auth.uid()`.
+
+If any box is unchecked: fix it before continuing. Don't skip.
+
 ## Step 9: Deploy + Verify Live (5 min)
 
 Push everything to git:

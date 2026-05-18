@@ -24,6 +24,16 @@ By tomorrow you build your core feature. Today you build the foundation it sits 
 
 ---
 
+## Quick Note: Why Supabase + Not Postgres (For Engineers)
+
+> 🔧 **If you've shipped before, you've probably wondered:** "Why are we using Supabase instead of plain Postgres?"
+> Three reasons:
+> 1. **Built-in auth.** Rolling your own auth (signup/login/sessions/forgot-password/OAuth) is 2-3 days of careful work *if you do it right* — and most people don't. Supabase ships it as a free, battle-tested service.
+> 2. **Row Level Security at the DB layer.** RLS in Supabase is a thin wrapper around Postgres RLS. So you ARE using Postgres — just with a great managed layer.
+> 3. **Speed.** Setting up auth + DB + API in 2 hours instead of 2 days lets you spend the time savings on AI features in Week 2.
+>
+> If you really want to swap for raw Postgres later (after Day 18), every Supabase concept you learn maps cleanly. Auth flows go to `next-auth` or your own. RLS stays as RLS. Done.
+
 ## Part 1: Why Auth Is Always First (~10 min read)
 
 Every product needs to know **who the user is.** Without that, nothing personal can happen. No dashboards, no saved data, no "your" anything.

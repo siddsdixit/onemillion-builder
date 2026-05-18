@@ -18,6 +18,26 @@ That's it. Then you go to [Day 1](./week-1-foundation/day-01-vision/learn.md).
 
 ---
 
+## Pick Your Path First (1 min decision)
+
+Two paths through this course:
+
+### Path A — Local Install (recommended for most)
+You install everything on your laptop. Real dev environment forever. Skill transfers to any project. **Pick this if:** you have admin rights on your laptop, an OS update from the past 2 years, and you've used a terminal more than 3 times in your life.
+
+→ Continue below with Step 1.
+
+### Path B — Codespaces (browser-only, zero install)
+Everything runs in your browser via GitHub Codespaces. No local install. Works on Chromebook, locked-down corporate laptops, anything with a browser. Free 60 hrs/month covers the course.
+
+**Pick this if:** you're on a corporate laptop where you can't install software, you've never opened a terminal in your life, your laptop is more than 5 years old, OR local install has failed for you in the past.
+
+→ [Skip to Codespaces setup](#codespaces-fallback-last-resort) (it's at the bottom of this page — same instructions, less friction).
+
+> 💡 **Honest take:** Path A teaches you more. Path B gets you to Day 1 faster. Both produce a real shipped product by Day 18. Pick what fits your reality.
+
+---
+
 ## Step 1: Install Node.js (the engine your app runs on)
 
 Node.js is the runtime your Next.js app needs. You'll use it daily.

@@ -1,6 +1,13 @@
 # Day 4 — Stack + First Deploy
 
-**Week 1 | ~1–2.5 hours | First real code day** ⚡
+**Week 1 | First real code day** ⚡
+
+**Honest time bands:**
+- Engineers: 45–60 min
+- PMs / semi-technical: 1.5–2.5 hr
+- Non-technical (first time deploying): 3–4 hr — give yourself a weekend morning
+
+If you take longer than the band, that's fine. Day 4 is the steepest learning curve. The deploy loop you learn here saves you 100+ hours over the next 14 days.
 
 ---
 
@@ -25,6 +32,15 @@ This is the most important day of Week 1. Once you've seen your own URL work, yo
 *Loom recording link will be added in Sprint 3.*
 
 ---
+
+## Quick Note: Why These Tools, Why Not Others (For Engineers)
+
+> 🔧 **If you're an engineer wondering "why Next.js + Supabase + Vercel and not [X]":**
+> - **Next.js over Remix/SvelteKit:** Largest community, best AI generator support (Claude knows it better than anything else), Vercel-native.
+> - **Supabase over Postgres/Neon/PlanetScale:** Built-in auth + RLS in one service. You can swap to raw Postgres post-course; Supabase concepts map cleanly.
+> - **Vercel over Railway/Fly/Render:** Zero-config Next.js, automatic preview deploys, free tier covers thousands of users.
+>
+> The lock isn't religious — it's pragmatic. The course optimizes for "ship in 18 days." If you want to swap mid-course: the patterns transfer, but you're on your own. Save the divergence for product 2.
 
 ## Part 1: Why These Tools (~10 min read)
 

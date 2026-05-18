@@ -93,7 +93,47 @@ Save the file. Look at `http://localhost:3000` in your browser — it should hot
 
 ---
 
-## Step 4: Set Up Git + GitHub (10 min)
+## Step 4: Set Up Git + GitHub (15 min)
+
+**⚠️ DO THIS BEFORE TRYING TO PUSH:** GitHub no longer accepts passwords for authentication. You need either GitHub CLI or a Personal Access Token. Set this up FIRST or your push will fail with confusing errors.
+
+### Step 4a: Authenticate with GitHub (CHOOSE ONE)
+
+**Option A — GitHub CLI (easiest, RECOMMENDED):**
+
+```bash
+# Mac
+brew install gh
+
+# Windows (in Git Bash)
+winget install --id GitHub.cli
+# Or download from cli.github.com
+```
+
+Then:
+```bash
+gh auth login
+```
+
+Answer the prompts:
+- GitHub.com (not Enterprise)
+- HTTPS
+- Yes, authenticate Git
+- Login with web browser
+- Press Enter, paste the code into the browser window that opens
+- Authorize
+
+**You should see:** `✓ Logged in as your-username`.
+
+**Option B — Personal Access Token (manual):**
+
+1. Go to [github.com/settings/tokens](https://github.com/settings/tokens)
+2. Click **Generate new token** → **Generate new token (classic)**
+3. Note: `onemillion-course` | Expiration: 90 days | Scopes: check `repo`
+4. Click **Generate token** → copy the token (starts with `ghp_`) — save it like a password
+5. When git asks for your password later, paste this token instead
+
+### Step 4b: Initialize Git + First Commit
 
 In your second terminal:
 
@@ -105,14 +145,16 @@ git commit -m "Day 4: Next.js project initialized"
 
 **You should see:** Output ending with something like `[main (root-commit) abc1234] Day 4: Next.js project initialized`.
 
-Now create a GitHub repo. Go to [github.com/new](https://github.com/new):
+### Step 4c: Create The Remote GitHub Repo
+
+Go to [github.com/new](https://github.com/new):
 
 - Repository name: `my-onemillion-build` (or whatever you named your folder)
 - **Public** or **Private** — your choice
 - **Do NOT** check "Add a README" or any of the initial files
 - Click **Create repository**
 
-GitHub shows you commands. Use the second block, the one starting with `git remote add origin`:
+GitHub shows you commands. Use the block starting with `git remote add origin`:
 
 ```bash
 git remote add origin https://github.com/YOUR-USERNAME/my-onemillion-build.git
@@ -125,8 +167,6 @@ Replace `YOUR-USERNAME` with your actual GitHub username.
 **You should see:** Output ending with `Branch 'main' set up to track 'origin/main'.`
 
 Refresh github.com/YOUR-USERNAME/my-onemillion-build — your code is there.
-
-> 🆘 **If push fails with "authentication required":** GitHub requires a Personal Access Token now, not password. See [GitHub's auth guide](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens) or use GitHub CLI: `brew install gh && gh auth login`.
 
 ---
 
