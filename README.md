@@ -44,6 +44,16 @@ You finish in 18 days regardless. Honest about the variance.
 
 ---
 
+## You'll Miss Days. That's Normal.
+
+The 18 days are units of progress, not calendar days.
+
+You'll skip a day. You'll have a tough week. Real life will happen. **Pick up where you left off.** We're not Duolingo. The course waits for you. No shame, no streaks to maintain, no badge taken away. Builder #N gets earned when you finish — not by when you finish.
+
+Many builders take 30 or 40 calendar days to do the 18 days of work. Some take 90. They all become Builders. **The goal is to finish, not to race.**
+
+The only way to fail is to never come back.
+
 ## How It Works
 
 **Two ways to take it. Same content. Different rhythm.**
@@ -74,10 +84,11 @@ Full breakdown: [cost-transparency.md](./cost-transparency.md).
 ## Start Here
 
 1. Read [the Manifesto](./MANIFESTO.md) — why this exists, why now
-2. Run [getting-started.md](./getting-started.md) — install your tools (Mac + Windows + Codespaces fallback)
-3. Get your [API keys](./getting-your-api-key.md) — Anthropic + Supabase
-4. Pick your editor: [tools/README.md](./tools/README.md) — Claude Code, Cursor, Antigravity, or any AI builder works
-5. Open [Week 1, Day 1](./week-1-foundation/day-01-vision/learn.md) — your first day starts here
+2. **[Day 0: Post about it publicly](./day-0-commit/README.md)** — 5 min. Doubles your odds of finishing. Trust the data.
+3. Run [getting-started.md](./getting-started.md) — install your tools (Mac + Windows + Codespaces fallback)
+4. Get your [API keys](./getting-your-api-key.md) — Anthropic + Supabase
+5. Pick your editor: [tools/README.md](./tools/README.md) — Claude Code, Cursor, Antigravity, or any AI builder works
+6. Open [Week 1, Day 1](./week-1-foundation/day-01-vision/learn.md) — your first day starts here
 
 Or, if you want the live community + accountability, [apply to a cohort](./cohort/README.md).
 

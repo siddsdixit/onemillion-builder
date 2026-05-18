@@ -50,6 +50,16 @@ You can even complete the course in just Claude.ai web chat with paste-able prom
 
 ---
 
+## 4.5 What if I fall behind?
+
+You'll fall behind. Everyone does. Real life happens. The course is designed for it.
+
+**There's no shame, no streak, no badge taken away if you skip a day or a week.** The 18 days are units of progress, not calendar days. Builder #N gets earned when you finish, not by when you finish.
+
+Many builders take 30 or 60 calendar days to complete the 18 days of work. Some take 90 days. They all graduate. You will too.
+
+The only failure mode is not coming back. If life pulls you away, just come back when it lets you. We're not Duolingo. The course waits.
+
 ## 5. Can I skip days or do them out of order?
 
 Not really. Each day depends on the previous one. Day 4 needs Day 3's PRD. Day 7 needs Day 6's working app. The verification system enforces this — you can't get Builder #N if you skipped days.

@@ -82,7 +82,42 @@ Save the file.
 
 ---
 
-## Step 4: Run Day 1 Verification
+## Step 4: 🎉 Bonus — Deploy Your First URL (10 min, browser only)
+
+Before you finish Day 1, you're going to put your name on the internet.
+
+This is the magic moment. No coding. No terminal. Just a browser. By the end of these 10 minutes you'll have a real URL — `your-name.vercel.app` — that anyone in the world can visit. **Day 1 ends with you having shipped something public.**
+
+### Step 4a — Open Vercel's template gallery
+Go to [vercel.com/templates/next.js](https://vercel.com/templates/next.js) (any free Next.js template works — recommended: pick the simplest one, like "Next.js Starter" or "Hello World").
+
+### Step 4b — Click "Deploy"
+You'll be asked to sign in to Vercel (use your GitHub if you've set that up; otherwise sign in with email).
+
+### Step 4c — Pick a project name
+Use something like `[your-first-name]-onemillion-day-1` (e.g., `priya-onemillion-day-1`).
+
+Click **Create**. Vercel does the rest — clones the template, deploys it, gives you a URL.
+
+### Step 4d — Wait 60 seconds, then click your URL
+Your URL will be `https://[whatever-you-named-it].vercel.app`. Open it.
+
+**You should see:** a working Next.js homepage. It's not yours yet — it's a template. But it's running on the internet, with your name in the URL, deployed by you.
+
+### Step 4e — Send the URL to ONE person
+A friend. Your spouse. A coworker. Your group chat. Whoever. Say:
+
+> "Day 1 of OneMillion done. Started building. Here's my URL: [your URL]. Going to make it real over the next 17 days."
+
+That's the public commitment. You shipped on Day 1. You're not a course-taker anymore. You're a builder.
+
+> 💡 **Why this matters:** Most courses end Day 1 with "write something in a journal." OneMillion ends Day 1 with a live URL and a public commitment. You now have skin in the game. Day 4 (the hard day) doesn't feel like quitting an idea — it feels like quitting something real you already shipped.
+
+> 🔧 **Engineers:** Yes, this is just a Vercel template deploy. We use it as a psychological hook, not a technical exercise. The real Day 4 work (creating your own Next.js project locally with proper structure) still happens. Trust the process.
+
+---
+
+## Step 5: Run Day 1 Verification
 
 You're going to ask Claude Code to check your work. This is how every day ends — the AI verifies that you actually did what you were supposed to.
 
@@ -108,6 +143,8 @@ If needs revision, fix the issues and re-paste the verification prompt.
 - [ ] `.onemillion/project.json` exists and is valid JSON
 - [ ] `product_type` is one of `web_app`, `ai_agent`, or `hybrid`
 - [ ] `idea` is 2 sentences with a specific user and specific pain
+- [ ] **Your Vercel template URL is live** (e.g., `https://your-name-onemillion-day-1.vercel.app`)
+- [ ] You sent the URL to at least one person (public commitment moment)
 - [ ] Verification ran and returned "Pass" (or you've addressed all revision notes)
 
 ---

@@ -2,6 +2,8 @@
 
 **Week 1 | ~30–60 min | No code today**
 
+> 💜 **First, the most important thing about this course:** you will miss days. That's normal. The 18 days are units of progress, not calendar days. Skip a day, take a week off, come back when life lets you. **No shame, no streaks, no badges taken away.** Builder #N gets earned when you finish, not by when you finish. The only way to fail is to never come back.
+
 ---
 
 ## What You'll Have After Today
@@ -9,9 +11,10 @@
 - A picked **product type** (web app / AI agent / hybrid)
 - An **initial idea** written down in your project folder
 - A mental model of how software actually works — the four parts every product has
-- The reflexive answer to "what are you building?" — even if it changes by Day 4
+- **A live URL on the internet** — `your-name.vercel.app` — your first deployment, before you've written a line of code
+- A **public commitment** — you'll send the URL to one person you know
 
-Today is the only day with no code. Use it. Days 2 onwards get hands-on fast.
+Today is the day you go from "course-taker" to "person who has shipped something." It happens before you write any code.
 
 ---
 
