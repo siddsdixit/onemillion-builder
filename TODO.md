@@ -6,12 +6,11 @@ _Living roadmap. Updated as work progresses._
 
 ## In Progress
 
-- [ ] Apply Move 1: Front-load Day 1 visible win (Vercel template deploy ending)
-- [ ] Apply Move 2: Day 0 LinkedIn commitment template
-- [ ] Apply Move 6: Permission-to-fall-off messaging in README + FAQ
-- [ ] Write Week 2 content (Days 7-12 — Make It AI)
-- [ ] Write Week 3 content (Days 13-18 — Ship & Sell)
-- [ ] Write verify schemas for Days 7-18
+- [ ] Write verify schemas for Days 7-18 (still pending)
+
+## Pending (lower priority)
+
+- [ ] Update verify/agent/verify.md to handle all 18 day schemas
 
 ## Sprint 2 (next, autonomous)
 
@@ -51,8 +50,12 @@ _Living roadmap. Updated as work progresses._
 ## Done (recent)
 
 - [x] v0.2: Complete restructure (48 files, ~25K words) — pushed 2026-05-18
-- [x] v0.3: Apply P0 simulation gap fixes (Day 2 light path, RLS gate, env var checklist, etc.) — pushed 2026-05-18
+- [x] v0.3: Apply P0 simulation gap fixes — pushed 2026-05-18
+- [x] v0.4: Retention moves 1, 2, 6 (front-load win, public commitment, permission to fall off) — pushed
+- [x] v0.5: Week 2 content (Days 7-12 Make It AI, 30 files, ~22K words) — pushed
+- [x] v0.6: Week 3 content (Days 13-18 Ship & Sell, 31 files, ~28K words) — pushed
 - [x] 6-persona simulation across Days 1-6 + getting-started
 - [x] Consolidated gaps report
 - [x] VIDEOS_SID_MUST_RECORD.md prioritization
-- [x] GitHub repo init + first push to siddsdixit/onemillion-builder
+- [x] GitHub repo init + push to siddsdixit/onemillion-builder
+- [x] **Full 18-day course content-complete** — ~70K words, 100+ files
