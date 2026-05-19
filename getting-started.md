@@ -165,7 +165,7 @@ You won't use these today. You'll use them starting Day 4. But signing up takes 
 | **Supabase** | Database + authentication for your app | [supabase.com](https://supabase.com) (use "Continue with GitHub") |
 | **Vercel** | Hosts your app on the internet | [vercel.com/signup](https://vercel.com/signup) (use "Continue with GitHub") |
 
-> 💡 **Pick a GitHub username you'll be proud of.** It becomes your builder identity. `siddixit` not `coolguy420`.
+> 💡 **Pick a GitHub username you'll be proud of.** It becomes your builder identity. `your-real-name` not `coolguy420`.
 
 All three have **free tiers** that cover the full 18-day course with room to spare.
 
