@@ -6,7 +6,7 @@ Curated resources for after the 18 days. Keep building.
 
 ## Stay Current
 
-- **[Sid's LinkedIn](https://linkedin.com/in/siddixit)** — daily build posts, framework updates, Cohort announcements
+- **[Sid's LinkedIn](https://linkedin.com/in/siddharthdixit)** — daily build posts, framework updates, Cohort announcements
 - **OneMillion Crew Slack** — invite link in your Builder profile after Day 18
 
 ---

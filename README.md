@@ -1,6 +1,6 @@
 # 🚀 OneMillion: Build in 18 Days
 
-*Created by [Sid Dixit](https://linkedin.com/in/siddixit)*
+*Created by [Sid Dixit](https://linkedin.com/in/siddharthdixit)*
 
 ![OneMillion — Build in 18 days](diagrams/hero-image.png)
 
@@ -132,7 +132,7 @@ Have questions about cost, time, what if I fall behind, what AI tool to use? [Re
 
 ## 💬 Share the Love
 
-If you finished the course, please share it. Tag [Sid Dixit](https://linkedin.com/in/siddixit) on LinkedIn with #BuildingWith1M and let him know what you built. It makes his day. It also helps the next Builder find the course.
+If you finished the course, please share it. Tag [Sid Dixit](https://linkedin.com/in/siddharthdixit) on LinkedIn with #BuildingWith1M and let him know what you built. It makes his day. It also helps the next Builder find the course.
 
 ---
 

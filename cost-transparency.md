@@ -46,7 +46,7 @@ I built this to be accessible. If $5–15 is a real barrier:
 1. **Anthropic free credits.** They start you with $5. That covers Week 1 entirely.
 2. **Skip the custom domain.** Stay on `yourapp.vercel.app` forever. Functionally identical, just less brand-able.
 3. **Use Claude Haiku for most builds.** It's a fraction of the cost of Sonnet. The course uses Sonnet by default but Haiku works for most tasks.
-4. **Apply for a course scholarship.** If you genuinely can't afford the Anthropic credits, DM Sid on [LinkedIn](https://linkedin.com/in/siddixit) — the OneMillion Crew has a small fund to cover API costs for builders who need it. No questions asked, no paperwork.
+4. **Apply for a course scholarship.** If you genuinely can't afford the Anthropic credits, DM Sid on [LinkedIn](https://linkedin.com/in/siddharthdixit) — the OneMillion Crew has a small fund to cover API costs for builders who need it. No questions asked, no paperwork.
 
 ---
 
