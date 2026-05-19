@@ -1,172 +1,147 @@
-# OneMillion
+# 🚀 OneMillion: Build in 18 Days
 
-**Build a real AI-native product in 18 days. Free, forever. Anyone.**
+*Created by [Sid Dixit](https://linkedin.com/in/siddixit)*
 
-You're not taking a course. You're entering an apprenticeship.
-
-In 18 days, working 1-2 hours per day, you will ship a real software product to the internet. It will have your name on it. It will be at your own domain. Real people will use it. You will walk out a **Builder**, with a permanent number — Builder #N — listed on this repo forever.
-
-You don't need to know how to code. The AI writes the code. Your job is to think clearly, make good decisions, and ship.
+![OneMillion — Build in 18 days](diagrams/hero-image.png)
 
 ---
 
-## Who This Is For
+You've probably seen the headlines: solo founders shipping SaaS in days, indie builders launching real AI products from their laptops, people who never wrote code five months ago now running real businesses. You try to copy it. Three hours in, you're debugging a system you don't understand.
 
-**Everyone.** Every age. Every background. Every continent.
+**This course fixes that.**
+
+- **18 days, one phase at a time.** No information overload. Build one thing each day and understand it before moving on.
+- **1–2 hours per day.** Honest time bands — engineers go faster, EAs go slower. Both finish on Day 18.
+- **A real shipped product, no team required.** By Day 18 you have a live URL, real auth, a working AI feature, and real users. Total cost: ~$10 in AI credits.
+- **Use AI to learn AI.** Your AI tool (Claude Code, Cursor, Antigravity — your choice) reads the course files and helps you ship. You're the director.
+
+&nbsp;
+
+## 🎓 Get Certified — Become a Builder
+
+Complete all 18 days and pass all 18 verifications → receive **Builder #N**. Sequential, permanent, public. Listed forever at [onemillion.build/builders](builders/README.md).
+
+![Sample Builder profile](diagrams/builder-profile-sample.png)
+
+🎁 First 100 builders ever get **Founding Builder** status: permanent badge + Sid's personal Slack + intro to one investor or hiring manager on graduation.
+
+Apply for the next cohort: [cohort/README.md](cohort/README.md)
+
+---
+
+## 💡 How It Works
+
+- **Five files per day.** `learn.md` (concept), `build.md` (step-by-step), `ai-instructions-day-XX.md` (paste into your AI to verify your work), `loom.md` (Sid walks you through it), `resources.md` (go deeper).
+- **Read the learn, follow the build, run the verifier.** Pass all 18 verifiers → claim your Builder number.
+- **Your AI builds with you.** Each build includes prompts you paste into Claude Code (or Cursor, or any AI tool). It writes the code. You direct + review + ship.
+- **Transferable.** The framework (spec before code, multi-agent decomposition, validation gates, production hygiene, human review loop) applies to any product you build after.
+
+---
+
+## 📚 Course Days
+
+| Day | What You Build |
+|-----|----------------|
+| [Day 0: Public Commitment](day-0-commit/README.md) | A LinkedIn post — doubles your odds of finishing |
+| [Day 1: Vision + Mental Map](week-1-foundation/day-01-vision/learn.md) | A picked product type + idea + a live URL with your name |
+| [Day 2: Problem + Mom Test](week-1-foundation/day-02-problem/learn.md) | 3 real conversations + evidence-backed pain |
+| [Day 3: Write Your PRD](week-1-foundation/day-03-prd/learn.md) | Locked PRD with 5 sections + exactly 3 features |
+| [Day 4: Stack + First Deploy](week-1-foundation/day-04-stack/learn.md) | A real Next.js app deployed at your-app.vercel.app |
+| [Day 5: Auth + Database](week-1-foundation/day-05-auth/learn.md) | Signup → login working with Row Level Security |
+| [Day 6: Core Feature](week-1-foundation/day-06-core-feature/learn.md) | Your main feature working end-to-end, live |
+| [Day 7: AI Feature Spec](week-2-make-it-ai/day-07-ai-spec/learn.md) | Locked AI spec with measurable quality criteria |
+| [Day 8: First AI Call](week-2-make-it-ai/day-08-first-ai-call/learn.md) | Real Claude output flowing into your app |
+| [Day 9: Streaming UI](week-2-make-it-ai/day-09-streaming/learn.md) | Tokens appearing live in your UI |
+| [Day 10: Tool Use](week-2-make-it-ai/day-10-tool-use/learn.md) | AI takes real actions in your database |
+| [Day 11: RAG](week-2-make-it-ai/day-11-rag/learn.md) | AI personalized to your user's actual data |
+| [Day 12: Lock the AI](week-2-make-it-ai/day-12-lock-the-ai/learn.md) | Acceptance tests + cost budget + hard rate limit |
+| [Day 13: Production Hygiene](week-3-ship-and-sell/day-13-hygiene/learn.md) | 9-point audit — secrets, RLS, rate limits |
+| [Day 14: Custom Domain](week-3-ship-and-sell/day-14-domain/learn.md) | yourapp.com live with automatic SSL |
+| [Day 15: Monitoring](week-3-ship-and-sell/day-15-monitoring/learn.md) | Sentry + Vercel Analytics + UptimeRobot |
+| [Day 16: Landing Page](week-3-ship-and-sell/day-16-landing/learn.md) | Real landing page at root URL |
+| [Day 17: First 10 Users](week-3-ship-and-sell/day-17-first-users/learn.md) | At least 1 real user + feedback documented |
+| [Day 18: Demo Day → Builder #N](week-3-ship-and-sell/day-18-demo/learn.md) | 5-min Loom + your Builder number |
+
+---
+
+## 🏆 What You Walk Away With
+
+- A **live SaaS at yourapp.com** (or .vercel.app — also fine)
+- A **GitHub repo** with 18 days of commits — proof you built it
+- A **Builder number** — Builder #N — sequential and permanent
+- A **public profile** at onemillion.build/builders/[your-number]
+- A **LinkedIn badge** with verifiable credential
+- The ability to **build any product, anytime, from scratch — for the rest of your life**
+
+---
+
+## 🚀 Who This Course Is For
 
 - **Executive Assistants** who've never opened a terminal
 - **Product Managers** who've shipped specs but never built a product end-to-end
 - **Engineers** who want to master agentic SDLC and the new way of building
 - **Yoga teachers, nurses, designers, retirees, career-changers** — yes, all of you
 
-If you can use Google Docs, you can do this. The bootcamp has graduated builders on three continents who'd never written a line of code in their lives. They shipped real products. So will you.
-
-**Time budget by experience:**
-- Never coded: ~1.5–2 hours/day
-- Some technical background: ~1–1.5 hours/day
-- Engineer: 30–60 minutes/day
-
-You finish in 18 days regardless. Honest about the variance.
+Zero prior experience required. If you can use Google Docs, you can do this.
 
 ---
 
-## What You'll Build
+## 🛠️ What You Need to Start
 
-**One real AI-native SaaS product.** Deployed. Secure. With auth, a database, an AI feature, monitoring, a custom domain, a landing page, and at least one real user.
+- **A laptop** (Mac, Windows, or Linux)
+- **An Anthropic API key** ([here's how to get one](getting-your-api-key.md)) — ~$10 in credits covers the full course
+- **An AI tool of your choice** — Claude Code, Cursor, Antigravity, Windsurf, or any AI chat ([pick yours](tools/README.md))
 
-**Week 1 — Foundation.** You ship a working web app with auth and a core feature.
-
-**Week 2 — Make It AI.** You add real AI features — streaming, tool use, retrieval — into your app.
-
-**Week 3 — Ship & Sell.** You harden it for production, get your custom domain, build a landing page, and put it in front of real users.
-
-**Day 18 — First Voyage.** You demo your product (live or via Loom). On approval, you become **Builder #N** — your permanent, sequential, public number. Listed forever on the Builder Wall.
+Total setup time: ~30–60 minutes ([getting-started.md](getting-started.md)).
 
 ---
 
-## You'll Miss Days. That's Normal.
+## 🛡️ You'll Miss Days. That's Normal.
 
-The 18 days are units of progress, not calendar days.
-
-You'll skip a day. You'll have a tough week. Real life will happen. **Pick up where you left off.** We're not Duolingo. The course waits for you. No shame, no streaks to maintain, no badge taken away. Builder #N gets earned when you finish — not by when you finish.
-
-Many builders take 30 or 40 calendar days to do the 18 days of work. Some take 90. They all become Builders. **The goal is to finish, not to race.**
+The 18 days are units of progress, not calendar days. Skip a day, take a week off, come back when life lets you. **No shame, no streaks, no badges taken away.** Builder #N gets earned when you finish — not by when you finish.
 
 The only way to fail is to never come back.
 
-## How It Works
+---
 
-**Two ways to take it. Same content. Different rhythm.**
+## 🗓️ Live Cohorts
 
-### Self-Serve (free, anytime)
-This GitHub repo IS the course. Clone it, work through the 18 days at your own pace, submit your work for verification, claim your Builder number. Start any day. Finish whenever.
+Sid runs free weekend-based cohorts every 6–8 weeks. Saturday live session + 1 hr/day self-paced. 20–100 builders per cohort. Demo Day on the final Saturday.
 
-### Weekend Cohorts (free, scheduled)
-Sid runs live cohorts every few months. Saturday 2-hour session (live lecture + Q&A + Sid building alongside) + 1 hour/day of self-paced work + community Slack. Three weekends + Demo Day. **Apply at [cohort/README.md](./cohort/README.md).**
+→ Apply for the next cohort: [cohort/README.md](cohort/README.md)
 
-The first 100 builders ever get **Founding Builder** status — permanent badge, direct line to Sid, and a personal intro to one investor or hiring manager upon graduation.
+🎁 First 100 builders ever get permanent Founding Builder status.
 
 ---
 
-## What This Costs
+## ❓ FAQ
 
-**$0 in tuition. Forever.**
-
-You'll spend $0–20 over the 18 days on:
-- AI API credits (~$5–15 from Anthropic — Claude calls during the build)
-- Optional custom domain (~$10/year — only if you want yourname.com)
-- Everything else (Supabase, Vercel, GitHub, Cursor's free tier) is free
-
-Full breakdown: [cost-transparency.md](./cost-transparency.md).
+Have questions about cost, time, what if I fall behind, what AI tool to use? [Read the FAQ](FAQ.md).
 
 ---
 
-## Start Here
+## 🔗 Related
 
-1. Read [the Manifesto](./MANIFESTO.md) — why this exists, why now
-2. **[Day 0: Post about it publicly](./day-0-commit/README.md)** — 5 min. Doubles your odds of finishing. Trust the data.
-3. Run [getting-started.md](./getting-started.md) — install your tools (Mac + Windows + Codespaces fallback)
-4. Get your [API keys](./getting-your-api-key.md) — Anthropic + Supabase
-5. Pick your editor: [tools/README.md](./tools/README.md) — Claude Code, Cursor, Antigravity, or any AI builder works
-6. Open [Week 1, Day 1](./week-1-foundation/day-01-vision/learn.md) — your first day starts here
-
-Or, if you want the live community + accountability, [apply to a cohort](./cohort/README.md).
+- [The Manifesto: The Age of Agentic Engineering](MANIFESTO.md) — why this exists
+- [Cost Transparency](cost-transparency.md) — full $0–25 breakdown
+- [Best OneMillion Resources](best-onemillion-resources.md) — after-course exploration
+- [How verification works](verify/README.md) — how Builder #N is earned
+- [Builder Wall](builders/README.md) — public profiles of past graduates
 
 ---
 
-## The 18 Days At A Glance
+## 💬 Share the Love
 
-```
-WEEK 1 — FOUNDATION
-  Day 1: Vision + Mental Map      (no code yet)
-  Day 2: Problem + Mom Test       (no code yet)
-  Day 3: Write Your PRD           (lock scope)
-  Day 4: Stack + First Deploy     (hello world live)
-  Day 5: Auth + Database          (login working)
-  Day 6: Core Feature             (your main thing built)
-
-WEEK 2 — MAKE IT AI
-  Day 7: Pick Your AI Feature
-  Day 8: First AI Call
-  Day 9: Streaming UI
-  Day 10: Tool Use (AI takes actions)
-  Day 11: RAG (AI reads user data)
-  Day 12: Lock the AI Feature
-
-WEEK 3 — SHIP & SELL
-  Day 13: Production Hygiene
-  Day 14: Custom Domain
-  Day 15: Monitoring
-  Day 16: Landing Page
-  Day 17: First 10 Users
-  Day 18: Demo Day → Builder #N
-```
-
-Full day-by-day with time estimates: [week-1-foundation/README.md](./week-1-foundation/README.md).
+If you finished the course, please share it. Tag [Sid Dixit](https://linkedin.com/in/siddixit) on LinkedIn with #BuildingWith1M and let him know what you built. It makes his day. It also helps the next Builder find the course.
 
 ---
 
-## What You Walk Out With
+## 📄 License
 
-- A live SaaS at **yourapp.com** (yes, yours, with your name on it)
-- A **GitHub repo** showing 18 days of commits — proof you built it
-- A **Builder number** — Builder #N — sequential and permanent
-- A **public profile** at onemillion.build/builders/[your-number] linking to your product, your commits, your demo
-- A **LinkedIn badge** with verifiable credential
-- The ability to build any product, anytime, from scratch — for the rest of your life
-
-That last one is the real prize. The product is the proof. The skill is the gift.
+MIT. Free to use, fork, remix, and share. If you build on this, please credit OneMillion and link back to this repo.
 
 ---
 
-## The Five Pillars (What You're Actually Learning)
+**Happy building. 🚀**
 
-Threaded through every day. By Day 18 you don't just have a product — you know **how to think about building with AI.** That's what makes the difference between someone who can use AI and someone who can ship with it.
-
-1. **Spec before code.** Never let AI generate without a spec it can validate against.
-2. **Multi-agent decomposition.** Small agents with clear roles beat one mega-prompt.
-3. **Validation gates.** Every phase has acceptance criteria. The AI checks itself.
-4. **Production hygiene from day 1.** Auth, security, monitoring are foundation, not afterthought.
-5. **The human review loop.** AI proposes. You dispose. Spot-check, don't trust blindly.
-
-This is **agentic SDLC** — the new way to build software. The five pillars are the framework. The 18 days are how you internalize them.
-
----
-
-## License
-
-MIT. Free to use, fork, remix, share. If you build on this, credit the source.
-
----
-
-## Who Made This
-
-Sid Dixit. Personal mission: teach one million people to build with AI — free, forever.
-
-Follow the build in public on [LinkedIn](https://linkedin.com/in/siddixit). The course is the byproduct of Sid building publicly, narrated, with you building alongside.
-
----
-
-> *The million starts with one. Are you one of them?*
-
-→ Start: [The Manifesto](./MANIFESTO.md) · [Getting Started](./getting-started.md) · [Day 1](./week-1-foundation/day-01-vision/learn.md)
+→ **[Start with Day 0](day-0-commit/README.md)**
