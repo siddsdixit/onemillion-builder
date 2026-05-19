@@ -30,8 +30,10 @@ _Living roadmap. Updated as work progresses._
 
 ## Needs Sid (manual work)
 
-- [ ] Record 3 P0 Looms (Day 4, 5, 6) — see VIDEOS_SID_MUST_RECORD.md — ~3-4 hours
+- [ ] Record P0 Looms (Days 4, 5, 6) — scripts at loom-scripts/day-04.md, day-05.md, day-06.md — ~3-4 hours
+- [ ] Record P1 Looms (Getting Started, Days 1, 2, 3) — scripts at loom-scripts/ — ~3-4 hours
 - [ ] Record daily 60-sec ritual Looms (Move 4 from retention strategy)
+- [ ] Record P2 Looms (Days 7-18) — outlines at loom-scripts/week-2-and-3-outlines.md — between Cohort 0 and 1
 - [ ] Post MANIFESTO.md to LinkedIn
 - [ ] DM first 10 trusted people for feedback before public launch
 - [ ] Set up cohort application (Typeform/Tally)
@@ -59,3 +61,6 @@ _Living roadmap. Updated as work progresses._
 - [x] VIDEOS_SID_MUST_RECORD.md prioritization
 - [x] GitHub repo init + push to siddsdixit/onemillion-builder
 - [x] **Full 18-day course content-complete** — ~70K words, 100+ files
+- [x] Loom scripts: all 19 videos scripted (P0 full scripts, P1 full scripts, P2 scene outlines) — pushed 2026-05-19
+- [x] Fix getting-started.md github username example (siddixit → your-real-name)
+- [x] Triple-check LinkedIn URLs — all 4 references confirmed siddharthdixit
