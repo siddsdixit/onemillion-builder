@@ -1,128 +1,143 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" width="800" height="520">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 620" width="880" height="620" font-family="'Helvetica Neue', Arial, sans-serif">
   <defs>
-    <linearGradient id="certBg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#0a0c14"/>
-      <stop offset="100%" style="stop-color:#12172a"/>
+    <linearGradient id="paper" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a0c16"/>
+      <stop offset="50%" stop-color="#0e1322"/>
+      <stop offset="100%" stop-color="#11182c"/>
     </linearGradient>
-    <linearGradient id="goldLine" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:0"/>
-      <stop offset="20%" style="stop-color:#FFD700;stop-opacity:1"/>
-      <stop offset="80%" style="stop-color:#FFD700;stop-opacity:1"/>
-      <stop offset="100%" style="stop-color:#FFD700;stop-opacity:0"/>
+    <linearGradient id="goldText" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#F4B842"/>
+      <stop offset="35%" stop-color="#FFE9A8"/>
+      <stop offset="65%" stop-color="#FFD25A"/>
+      <stop offset="100%" stop-color="#E08A1E"/>
     </linearGradient>
-    <linearGradient id="goldText" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#FFD700"/>
-      <stop offset="50%" style="stop-color:#FFF4A0"/>
-      <stop offset="100%" style="stop-color:#FF8C00"/>
+    <linearGradient id="goldLine" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#FFD700" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#FFD700" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#FFD700" stop-opacity="0"/>
     </linearGradient>
-    <linearGradient id="orangeText" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#FF6B2B"/>
-      <stop offset="100%" style="stop-color:#FF9A4D"/>
+    <linearGradient id="orangeText" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#FF6B2B"/>
+      <stop offset="100%" stop-color="#FFA251"/>
     </linearGradient>
-    <filter id="goldGlow">
-      <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
-      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    <radialGradient id="centerGlow" cx="50%" cy="42%" r="60%">
+      <stop offset="0%" stop-color="#FFD700" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#FFD700" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="sealGrad" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#FFE9A8"/>
+      <stop offset="55%" stop-color="#F4B842"/>
+      <stop offset="100%" stop-color="#B8780F"/>
+    </radialGradient>
+    <filter id="cGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="7" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
-    <filter id="subtleGlow">
-      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
-      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    <filter id="cGlowS" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="2.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
-    <!-- Corner ornament pattern -->
-    <pattern id="dotGrid" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
-      <circle cx="10" cy="10" r="0.8" fill="#FFD700" opacity="0.15"/>
+    <pattern id="guilloche" x="0" y="0" width="34" height="34" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <path d="M0 17 Q8.5 0 17 17 T34 17" fill="none" stroke="#FFD700" stroke-width="0.4" opacity="0.05"/>
+      <path d="M0 17 Q8.5 34 17 17 T34 17" fill="none" stroke="#FFD700" stroke-width="0.4" opacity="0.05"/>
     </pattern>
   </defs>
 
-  <!-- Background -->
-  <rect width="800" height="520" fill="url(#certBg)" rx="16"/>
+  <!-- Paper -->
+  <rect width="880" height="620" rx="18" fill="url(#paper)"/>
+  <rect width="880" height="620" rx="18" fill="url(#guilloche)"/>
+  <rect width="880" height="620" rx="18" fill="url(#centerGlow)"/>
 
-  <!-- Dot grid subtle background -->
-  <rect width="800" height="520" fill="url(#dotGrid)" rx="16" opacity="0.5"/>
+  <!-- Ornamental borders -->
+  <rect x="22" y="22" width="836" height="576" rx="12" fill="none" stroke="url(#goldText)" stroke-width="2" opacity="0.55"/>
+  <rect x="32" y="32" width="816" height="556" rx="8"  fill="none" stroke="#FFD700" stroke-width="0.6" opacity="0.22"/>
+  <rect x="38" y="38" width="804" height="544" rx="6"  fill="none" stroke="#FFD700" stroke-width="0.4" opacity="0.12"/>
 
-  <!-- Outer border -->
-  <rect x="16" y="16" width="768" height="488" rx="12" fill="none" stroke="#FFD700" stroke-width="1.5" opacity="0.3"/>
-  <!-- Inner border -->
-  <rect x="28" y="28" width="744" height="464" rx="8" fill="none" stroke="#FFD700" stroke-width="0.5" opacity="0.15"/>
-
-  <!-- Corner ornaments — top left -->
-  <g opacity="0.6" stroke="#FFD700" stroke-width="1" fill="none">
-    <line x1="28" y1="60" x2="28" y2="28" stroke-width="2"/>
-    <line x1="28" y1="28" x2="60" y2="28" stroke-width="2"/>
-    <circle cx="28" cy="28" r="4" fill="#FFD700" stroke="none"/>
-  </g>
-  <!-- Corner ornaments — top right -->
-  <g opacity="0.6" stroke="#FFD700" stroke-width="1" fill="none">
-    <line x1="772" y1="60" x2="772" y2="28" stroke-width="2"/>
-    <line x1="772" y1="28" x2="740" y2="28" stroke-width="2"/>
-    <circle cx="772" cy="28" r="4" fill="#FFD700" stroke="none"/>
-  </g>
-  <!-- Corner ornaments — bottom left -->
-  <g opacity="0.6" stroke="#FFD700" stroke-width="1" fill="none">
-    <line x1="28" y1="460" x2="28" y2="492" stroke-width="2"/>
-    <line x1="28" y1="492" x2="60" y2="492" stroke-width="2"/>
-    <circle cx="28" cy="492" r="4" fill="#FFD700" stroke="none"/>
-  </g>
-  <!-- Corner ornaments — bottom right -->
-  <g opacity="0.6" stroke="#FFD700" stroke-width="1" fill="none">
-    <line x1="772" y1="460" x2="772" y2="492" stroke-width="2"/>
-    <line x1="772" y1="492" x2="740" y2="492" stroke-width="2"/>
-    <circle cx="772" cy="492" r="4" fill="#FFD700" stroke="none"/>
+  <!-- Corner flourishes -->
+  <g stroke="url(#goldText)" stroke-width="1.4" fill="none" opacity="0.7" stroke-linecap="round">
+    <!-- TL -->
+    <path d="M48 86 L48 56 Q48 48 56 48 L86 48"/>
+    <path d="M58 96 Q70 70 96 58" opacity="0.5"/>
+    <circle cx="48" cy="48" r="3" fill="#FFD700" stroke="none"/>
+    <!-- TR -->
+    <path d="M832 86 L832 56 Q832 48 824 48 L794 48"/>
+    <path d="M822 96 Q810 70 784 58" opacity="0.5"/>
+    <circle cx="832" cy="48" r="3" fill="#FFD700" stroke="none"/>
+    <!-- BL -->
+    <path d="M48 534 L48 564 Q48 572 56 572 L86 572"/>
+    <path d="M58 524 Q70 550 96 562" opacity="0.5"/>
+    <circle cx="48" cy="572" r="3" fill="#FFD700" stroke="none"/>
+    <!-- BR -->
+    <path d="M832 534 L832 564 Q832 572 824 572 L794 572"/>
+    <path d="M822 524 Q810 550 784 562" opacity="0.5"/>
+    <circle cx="832" cy="572" r="3" fill="#FFD700" stroke="none"/>
   </g>
 
-  <!-- Logo mark top center -->
-  <g transform="translate(400, 72)" text-anchor="middle">
-    <circle cx="0" cy="-8" r="28" fill="#FFD700" opacity="0.08"/>
-    <circle cx="0" cy="-8" r="28" fill="none" stroke="#FFD700" stroke-width="1" opacity="0.3"/>
-    <text x="0" y="0" font-family="'Helvetica Neue', Arial, sans-serif" font-size="20" font-weight="900" fill="url(#goldText)" text-anchor="middle">1M</text>
+  <!-- Monogram medallion -->
+  <g transform="translate(440,96)">
+    <circle r="34" fill="#FFD700" opacity="0.06"/>
+    <circle r="34" fill="none" stroke="url(#goldText)" stroke-width="1.4" opacity="0.55"/>
+    <circle r="27" fill="none" stroke="#FFD700" stroke-width="0.5" opacity="0.3"/>
+    <text y="9" font-size="26" font-weight="900" fill="url(#goldText)" text-anchor="middle">1M</text>
   </g>
 
-  <!-- Course name -->
-  <text x="400" y="118" font-family="'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" fill="#8B9CC4" text-anchor="middle" letter-spacing="4">ONEMILLION · AGENTIC ENGINEERING</text>
+  <!-- Course wordmark -->
+  <text x="440" y="156" font-size="11.5" font-weight="600" fill="#9AA9C9" text-anchor="middle" letter-spacing="5">ONEMILLION · AGENTIC ENGINEERING</text>
 
-  <!-- Gold divider line -->
-  <line x1="120" y1="134" x2="680" y2="134" stroke="url(#goldLine)" stroke-width="1"/>
+  <!-- divider with center diamond -->
+  <line x1="170" y1="176" x2="710" y2="176" stroke="url(#goldLine)" stroke-width="1"/>
+  <rect x="434" y="170" width="12" height="12" fill="#FFD700" opacity="0.7" transform="rotate(45 440 176)"/>
 
-  <!-- CERTIFICATE OF COMPLETION -->
-  <text x="400" y="172" font-family="'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="500" fill="#6B7A99" text-anchor="middle" letter-spacing="6">CERTIFICATE OF COMPLETION</text>
+  <!-- Title -->
+  <text x="440" y="214" font-size="15" font-weight="500" fill="#7C8AAA" text-anchor="middle" letter-spacing="7">CERTIFICATE OF COMPLETION</text>
 
-  <!-- This certifies that -->
-  <text x="400" y="208" font-family="Georgia, 'Times New Roman', serif" font-size="16" fill="#8B9CC4" text-anchor="middle" font-style="italic">This certifies that</text>
+  <!-- awarded to -->
+  <text x="440" y="252" font-size="16" fill="#8B9CC4" text-anchor="middle" font-style="italic" font-family="Georgia, 'Times New Roman', serif">This is awarded to</text>
 
-  <!-- Name -->
-  <text x="400" y="268" font-family="Georgia, 'Times New Roman', serif" font-size="52" font-weight="700" fill="url(#goldText)" text-anchor="middle" filter="url(#goldGlow)">Sid Dixit</text>
+  <!-- Recipient name -->
+  <text x="440" y="322" font-size="60" font-weight="700" fill="url(#goldText)" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" filter="url(#cGlow)">Sid Dixit</text>
 
-  <!-- Gold line under name -->
-  <line x1="200" y1="284" x2="600" y2="284" stroke="url(#goldLine)" stroke-width="1" opacity="0.5"/>
+  <!-- name underline flourish -->
+  <line x1="250" y1="342" x2="630" y2="342" stroke="url(#goldLine)" stroke-width="1" opacity="0.6"/>
+  <circle cx="440" cy="342" r="2.5" fill="#FFD700" opacity="0.7"/>
 
   <!-- Description -->
-  <text x="400" y="318" font-family="Georgia, 'Times New Roman', serif" font-size="15" fill="#8B9CC4" text-anchor="middle" font-style="italic">has built a real AI-native SaaS product</text>
-  <text x="400" y="342" font-family="Georgia, 'Times New Roman', serif" font-size="15" fill="#8B9CC4" text-anchor="middle" font-style="italic">and completed all 18 days of</text>
-  <text x="400" y="368" font-family="'Helvetica Neue', Arial, sans-serif" font-size="18" font-weight="800" fill="url(#orangeText)" text-anchor="middle">OneMillion: Build in 18 Days</text>
+  <text x="440" y="376" font-size="15" fill="#8B9CC4" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-style="italic">for building a real AI-native SaaS product and completing</text>
+  <text x="440" y="404" font-size="19" font-weight="800" fill="url(#orangeText)" text-anchor="middle">all 18 days of OneMillion: Build in 18 Days</text>
 
-  <!-- Builder number — the hero element -->
-  <g transform="translate(400, 418)" text-anchor="middle">
-    <rect x="-130" y="-36" width="260" height="56" rx="28" fill="#FFD700" opacity="0.08"/>
-    <rect x="-130" y="-36" width="260" height="56" rx="28" fill="none" stroke="#FFD700" stroke-width="1.5" opacity="0.5"/>
-    <text x="0" y="-8" font-family="'Helvetica Neue', Arial, sans-serif" font-size="10" fill="#8B9CC4" letter-spacing="3" font-weight="600">FOUNDING BUILDER</text>
-    <text x="0" y="14" font-family="'Helvetica Neue', Arial, sans-serif" font-size="22" font-weight="900" fill="url(#goldText)" filter="url(#subtleGlow)" letter-spacing="2">#0000001</text>
+  <!-- Builder number badge -->
+  <g transform="translate(440,468)">
+    <rect x="-150" y="-32" width="300" height="60" rx="30" fill="#FFD700" opacity="0.07"/>
+    <rect x="-150" y="-32" width="300" height="60" rx="30" fill="none" stroke="url(#goldText)" stroke-width="1.5" opacity="0.6"/>
+    <text x="0" y="-8" font-size="10" font-weight="600" fill="#8B9CC4" text-anchor="middle" letter-spacing="3.5">FOUNDING BUILDER</text>
+    <text x="0" y="18" font-size="26" font-weight="900" fill="url(#goldText)" text-anchor="middle" letter-spacing="3" filter="url(#cGlowS)">#0000001</text>
   </g>
 
-  <!-- Bottom row: date + seal + site -->
-  <g transform="translate(0, 460)">
-    <!-- Date -->
-    <text x="120" y="24" font-family="'Helvetica Neue', Arial, sans-serif" font-size="11" fill="#6B7A99" text-anchor="middle">2026</text>
-    <line x1="70" y1="10" x2="170" y2="10" stroke="#FFD700" stroke-width="0.5" opacity="0.3"/>
-    <text x="120" y="8" font-family="'Helvetica Neue', Arial, sans-serif" font-size="9" fill="#4A5568" text-anchor="middle" letter-spacing="1">DATE ISSUED</text>
+  <!-- Bottom row -->
+  <g transform="translate(0,536)">
+    <!-- date -->
+    <text x="170" y="6" font-size="9" fill="#5A6886" text-anchor="middle" letter-spacing="2">DATE ISSUED</text>
+    <line x1="110" y1="18" x2="230" y2="18" stroke="#FFD700" stroke-width="0.5" opacity="0.35"/>
+    <text x="170" y="36" font-size="13" fill="#9AA9C9" text-anchor="middle" font-family="Georgia, serif">2026</text>
 
-    <!-- Seal center -->
-    <circle cx="400" cy="16" r="22" fill="#FFD700" opacity="0.06"/>
-    <circle cx="400" cy="16" r="22" fill="none" stroke="#FFD700" stroke-width="1" opacity="0.4"/>
-    <circle cx="400" cy="16" r="16" fill="none" stroke="#FFD700" stroke-width="0.5" opacity="0.3"/>
-    <text x="400" y="20" font-family="'Helvetica Neue', Arial, sans-serif" font-size="16" fill="#FFD700" text-anchor="middle" filter="url(#subtleGlow)">✦</text>
+    <!-- seal -->
+    <g transform="translate(440,12)">
+      <!-- starburst -->
+      <g fill="#F4B842" opacity="0.9">
+        <path d="M0 -30 L4 -8 L-4 -8 Z"/><path d="M0 30 L4 8 L-4 8 Z"/>
+        <path d="M-30 0 L-8 4 L-8 -4 Z"/><path d="M30 0 L8 4 L8 -4 Z"/>
+        <path d="M-21 -21 L-4 -10 L-10 -4 Z"/><path d="M21 21 L4 10 L10 4 Z"/>
+        <path d="M21 -21 L10 -4 L4 -10 Z"/><path d="M-21 21 L-10 4 L-4 10 Z"/>
+      </g>
+      <circle r="22" fill="url(#sealGrad)"/>
+      <circle r="22" fill="none" stroke="#8A5A0A" stroke-width="0.8"/>
+      <circle r="16" fill="none" stroke="#8A5A0A" stroke-width="0.6" opacity="0.5"/>
+      <text y="5" font-size="15" fill="#5A3A06" text-anchor="middle" font-weight="900">★</text>
+    </g>
 
-    <!-- Site -->
-    <text x="680" y="24" font-family="'Helvetica Neue', Arial, sans-serif" font-size="11" fill="#6B7A99" text-anchor="middle">onemillion.build</text>
-    <line x1="630" y1="10" x2="730" y2="10" stroke="#FFD700" stroke-width="0.5" opacity="0.3"/>
-    <text x="680" y="8" font-family="'Helvetica Neue', Arial, sans-serif" font-size="9" fill="#4A5568" text-anchor="middle" letter-spacing="1">VERIFY AT</text>
+    <!-- verify -->
+    <text x="710" y="6" font-size="9" fill="#5A6886" text-anchor="middle" letter-spacing="2">VERIFY AT</text>
+    <line x1="650" y1="18" x2="770" y2="18" stroke="#FFD700" stroke-width="0.5" opacity="0.35"/>
+    <text x="710" y="36" font-size="13" fill="#9AA9C9" text-anchor="middle" font-family="Georgia, serif">onemillion.build</text>
   </g>
 </svg>

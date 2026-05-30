@@ -1,6 +1,6 @@
 # OneMillion Builder System
 
-This directory contains the OneMillion agent system. When Claude Code runs in any project, these agents are available via the `agents/` directory.
+This directory contains the OneMillion agent system. When Claude Code runs in any project, these agents are available via the `tools/agents/` directory.
 
 ## How It Works
 
@@ -70,12 +70,12 @@ your-project/
 
 ```bash
 # Copy agents to Claude's global config
-cp -r agents/* ~/.claude/agents/
-cp -r skills/* ~/.claude/skills/
+cp -r tools/agents/* ~/.claude/agents/
+cp -r tools/skills/* ~/.claude/skills/
 
 # Or use symlinks to get updates automatically
-ln -s $(pwd)/agents/* ~/.claude/agents/
-ln -s $(pwd)/skills/* ~/.claude/skills/
+ln -s $(pwd)/tools/agents/* ~/.claude/agents/
+ln -s $(pwd)/tools/skills/* ~/.claude/skills/
 ```
 
 ## Getting Started

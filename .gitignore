@@ -5,3 +5,7 @@ archive/
 *.pyc
 __pycache__/
 .env
+loom-scripts/
+TODO.md
+landing/
+CLAUDE.md
