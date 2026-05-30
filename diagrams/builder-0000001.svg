@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" width="800" height="520">
+  <defs>
+    <linearGradient id="certBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0c14"/>
+      <stop offset="100%" style="stop-color:#12172a"/>
+    </linearGradient>
+    <linearGradient id="goldLine" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:0"/>
+      <stop offset="20%" style="stop-color:#FFD700;stop-opacity:1"/>
+      <stop offset="80%" style="stop-color:#FFD700;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#FFD700;stop-opacity:0"/>
+    </linearGradient>
+    <linearGradient id="goldText" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#FFD700"/>
+      <stop offset="50%" style="stop-color:#FFF4A0"/>
+      <stop offset="100%" style="stop-color:#FF8C00"/>
+    </linearGradient>
+    <linearGradient id="orangeText" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#FF6B2B"/>
+      <stop offset="100%" style="stop-color:#FF9A4D"/>
+    </linearGradient>
+    <filter id="goldGlow">
+      <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="subtleGlow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <!-- Corner ornament pattern -->
+    <pattern id="dotGrid" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="10" cy="10" r="0.8" fill="#FFD700" opacity="0.15"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="520" fill="url(#certBg)" rx="16"/>
+
+  <!-- Dot grid subtle background -->
+  <rect width="800" height="520" fill="url(#dotGrid)" rx="16" opacity="0.5"/>
+
+  <!-- Outer border -->
+  <rect x="16" y="16" width="768" height="488" rx="12" fill="none" stroke="#FFD700" stroke-width="1.5" opacity="0.3"/>
+  <!-- Inner border -->
+  <rect x="28" y="28" width="744" height="464" rx="8" fill="none" stroke="#FFD700" stroke-width="0.5" opacity="0.15"/>
+
+  <!-- Corner ornaments — top left -->
+  <g opacity="0.6" stroke="#FFD700" stroke-width="1" fill="none">
+    <line x1="28" y1="60" x2="28" y2="28" stroke-width="2"/>
+    <line x1="28" y1="28" x2="60" y2="28" stroke-width="2"/>
+    <circle cx="28" cy="28" r="4" fill="#FFD700" stroke="none"/>
+  </g>
+  <!-- Corner ornaments — top right -->
+  <g opacity="0.6" stroke="#FFD700" stroke-width="1" fill="none">
+    <line x1="772" y1="60" x2="772" y2="28" stroke-width="2"/>
+    <line x1="772" y1="28" x2="740" y2="28" stroke-width="2"/>
+    <circle cx="772" cy="28" r="4" fill="#FFD700" stroke="none"/>
+  </g>
+  <!-- Corner ornaments — bottom left -->
+  <g opacity="0.6" stroke="#FFD700" stroke-width="1" fill="none">
+    <line x1="28" y1="460" x2="28" y2="492" stroke-width="2"/>
+    <line x1="28" y1="492" x2="60" y2="492" stroke-width="2"/>
+    <circle cx="28" cy="492" r="4" fill="#FFD700" stroke="none"/>
+  </g>
+  <!-- Corner ornaments — bottom right -->
+  <g opacity="0.6" stroke="#FFD700" stroke-width="1" fill="none">
+    <line x1="772" y1="460" x2="772" y2="492" stroke-width="2"/>
+    <line x1="772" y1="492" x2="740" y2="492" stroke-width="2"/>
+    <circle cx="772" cy="492" r="4" fill="#FFD700" stroke="none"/>
+  </g>
+
+  <!-- Logo mark top center -->
+  <g transform="translate(400, 72)" text-anchor="middle">
+    <circle cx="0" cy="-8" r="28" fill="#FFD700" opacity="0.08"/>
+    <circle cx="0" cy="-8" r="28" fill="none" stroke="#FFD700" stroke-width="1" opacity="0.3"/>
+    <text x="0" y="0" font-family="'Helvetica Neue', Arial, sans-serif" font-size="20" font-weight="900" fill="url(#goldText)" text-anchor="middle">1M</text>
+  </g>
+
+  <!-- Course name -->
+  <text x="400" y="118" font-family="'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" fill="#8B9CC4" text-anchor="middle" letter-spacing="4">ONEMILLION · AGENTIC ENGINEERING</text>
+
+  <!-- Gold divider line -->
+  <line x1="120" y1="134" x2="680" y2="134" stroke="url(#goldLine)" stroke-width="1"/>
+
+  <!-- CERTIFICATE OF COMPLETION -->
+  <text x="400" y="172" font-family="'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="500" fill="#6B7A99" text-anchor="middle" letter-spacing="6">CERTIFICATE OF COMPLETION</text>
+
+  <!-- This certifies that -->
+  <text x="400" y="208" font-family="Georgia, 'Times New Roman', serif" font-size="16" fill="#8B9CC4" text-anchor="middle" font-style="italic">This certifies that</text>
+
+  <!-- Name -->
+  <text x="400" y="268" font-family="Georgia, 'Times New Roman', serif" font-size="52" font-weight="700" fill="url(#goldText)" text-anchor="middle" filter="url(#goldGlow)">Sid Dixit</text>
+
+  <!-- Gold line under name -->
+  <line x1="200" y1="284" x2="600" y2="284" stroke="url(#goldLine)" stroke-width="1" opacity="0.5"/>
+
+  <!-- Description -->
+  <text x="400" y="318" font-family="Georgia, 'Times New Roman', serif" font-size="15" fill="#8B9CC4" text-anchor="middle" font-style="italic">has built a real AI-native SaaS product</text>
+  <text x="400" y="342" font-family="Georgia, 'Times New Roman', serif" font-size="15" fill="#8B9CC4" text-anchor="middle" font-style="italic">and completed all 18 days of</text>
+  <text x="400" y="368" font-family="'Helvetica Neue', Arial, sans-serif" font-size="18" font-weight="800" fill="url(#orangeText)" text-anchor="middle">OneMillion: Build in 18 Days</text>
+
+  <!-- Builder number — the hero element -->
+  <g transform="translate(400, 418)" text-anchor="middle">
+    <rect x="-130" y="-36" width="260" height="56" rx="28" fill="#FFD700" opacity="0.08"/>
+    <rect x="-130" y="-36" width="260" height="56" rx="28" fill="none" stroke="#FFD700" stroke-width="1.5" opacity="0.5"/>
+    <text x="0" y="-8" font-family="'Helvetica Neue', Arial, sans-serif" font-size="10" fill="#8B9CC4" letter-spacing="3" font-weight="600">FOUNDING BUILDER</text>
+    <text x="0" y="14" font-family="'Helvetica Neue', Arial, sans-serif" font-size="22" font-weight="900" fill="url(#goldText)" filter="url(#subtleGlow)" letter-spacing="2">#0000001</text>
+  </g>
+
+  <!-- Bottom row: date + seal + site -->
+  <g transform="translate(0, 460)">
+    <!-- Date -->
+    <text x="120" y="24" font-family="'Helvetica Neue', Arial, sans-serif" font-size="11" fill="#6B7A99" text-anchor="middle">2026</text>
+    <line x1="70" y1="10" x2="170" y2="10" stroke="#FFD700" stroke-width="0.5" opacity="0.3"/>
+    <text x="120" y="8" font-family="'Helvetica Neue', Arial, sans-serif" font-size="9" fill="#4A5568" text-anchor="middle" letter-spacing="1">DATE ISSUED</text>
+
+    <!-- Seal center -->
+    <circle cx="400" cy="16" r="22" fill="#FFD700" opacity="0.06"/>
+    <circle cx="400" cy="16" r="22" fill="none" stroke="#FFD700" stroke-width="1" opacity="0.4"/>
+    <circle cx="400" cy="16" r="16" fill="none" stroke="#FFD700" stroke-width="0.5" opacity="0.3"/>
+    <text x="400" y="20" font-family="'Helvetica Neue', Arial, sans-serif" font-size="16" fill="#FFD700" text-anchor="middle" filter="url(#subtleGlow)">✦</text>
+
+    <!-- Site -->
+    <text x="680" y="24" font-family="'Helvetica Neue', Arial, sans-serif" font-size="11" fill="#6B7A99" text-anchor="middle">onemillion.build</text>
+    <line x1="630" y1="10" x2="730" y2="10" stroke="#FFD700" stroke-width="0.5" opacity="0.3"/>
+    <text x="680" y="8" font-family="'Helvetica Neue', Arial, sans-serif" font-size="9" fill="#4A5568" text-anchor="middle" letter-spacing="1">VERIFY AT</text>
+  </g>
+</svg>

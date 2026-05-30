@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>OneMillion — Build in 18 Days</title>
+  <meta name="description" content="Build ONE real AI product in 18 days. Deployed. Real users. On your résumé. Free forever."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #050810;
+      --bg2: #080d1a;
+      --orange: #FF6B2B;
+      --orange-light: #FF9A4D;
+      --teal: #4ECDC4;
+      --gold: #FFD700;
+      --purple: #A78BFA;
+      --pink: #F472B6;
+      --text: #F0F4FF;
+      --text-muted: #8B9CC4;
+      --text-dim: #4A5568;
+      --border: rgba(255,107,43,0.15);
+      --border-gold: rgba(255,215,0,0.25);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* ─── NAV ─────────────────────────────────────────────── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 48px; height: 64px;
+      background: rgba(5,8,16,0.85);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(255,107,43,0.1);
+    }
+    .nav-logo {
+      font-size: 18px; font-weight: 900; color: var(--text);
+      text-decoration: none; letter-spacing: -0.5px;
+    }
+    .nav-logo span { color: var(--orange); }
+    .nav-links { display: flex; gap: 32px; align-items: center; }
+    .nav-links a {
+      color: var(--text-muted); text-decoration: none; font-size: 14px;
+      font-weight: 500; transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--text); }
+    .nav-cta {
+      background: var(--orange); color: white !important;
+      padding: 8px 20px; border-radius: 8px; font-weight: 600 !important;
+      font-size: 14px !important; transition: background 0.2s !important;
+    }
+    .nav-cta:hover { background: var(--orange-light) !important; color: white !important; }
+
+    /* ─── HERO ────────────────────────────────────────────── */
+    .hero {
+      min-height: 100vh;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      text-align: center;
+      padding: 120px 48px 80px;
+      position: relative; overflow: hidden;
+    }
+    .hero-grid {
+      position: absolute; inset: 0;
+      background-image:
+        linear-gradient(rgba(255,107,43,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,107,43,0.04) 1px, transparent 1px);
+      background-size: 80px 80px;
+    }
+    .hero-glow {
+      position: absolute; top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 800px; height: 400px;
+      background: radial-gradient(ellipse, rgba(255,107,43,0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(255,107,43,0.1); border: 1px solid rgba(255,107,43,0.3);
+      border-radius: 100px; padding: 6px 16px; margin-bottom: 32px;
+      font-size: 12px; font-weight: 600; color: var(--orange); letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    .hero-badge .dot {
+      width: 6px; height: 6px; border-radius: 50%; background: var(--orange);
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(0.8); }
+    }
+    h1 {
+      font-size: clamp(48px, 7vw, 88px);
+      font-weight: 900; line-height: 1.0;
+      letter-spacing: -3px;
+      margin-bottom: 24px;
+    }
+    h1 .line1 { color: var(--text); display: block; }
+    h1 .line2 { color: var(--text); display: block; }
+    h1 .line3 {
+      display: block;
+      background: linear-gradient(90deg, var(--orange), var(--orange-light));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero-sub {
+      font-size: clamp(16px, 2vw, 20px);
+      color: var(--text-muted); margin-bottom: 48px;
+      max-width: 540px; line-height: 1.6;
+    }
+    .hero-ctas {
+      display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;
+      margin-bottom: 64px;
+    }
+    .btn-primary {
+      background: var(--orange);
+      color: white; text-decoration: none;
+      padding: 16px 36px; border-radius: 10px;
+      font-size: 16px; font-weight: 700;
+      transition: all 0.2s; letter-spacing: -0.3px;
+      box-shadow: 0 0 32px rgba(255,107,43,0.3);
+    }
+    .btn-primary:hover {
+      background: var(--orange-light);
+      box-shadow: 0 0 48px rgba(255,107,43,0.5);
+      transform: translateY(-1px);
+    }
+    .btn-secondary {
+      background: rgba(255,255,255,0.05);
+      color: var(--text); text-decoration: none;
+      padding: 16px 36px; border-radius: 10px;
+      font-size: 16px; font-weight: 600;
+      border: 1px solid rgba(255,255,255,0.1);
+      transition: all 0.2s;
+    }
+    .btn-secondary:hover {
+      background: rgba(255,255,255,0.08);
+      border-color: rgba(255,255,255,0.2);
+    }
+    .hero-stats {
+      display: flex; gap: 48px; justify-content: center; flex-wrap: wrap;
+    }
+    .stat { text-align: center; }
+    .stat-num {
+      font-size: 32px; font-weight: 900;
+      background: linear-gradient(90deg, var(--gold), #FF8C00);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text; display: block;
+    }
+    .stat-label { font-size: 12px; color: var(--text-dim); font-weight: 500; letter-spacing: 1px; text-transform: uppercase; }
+
+    /* ─── SECTIONS ────────────────────────────────────────── */
+    section { padding: 100px 48px; max-width: 1120px; margin: 0 auto; }
+    .section-label {
+      display: inline-block;
+      font-size: 11px; font-weight: 700; letter-spacing: 3px;
+      color: var(--orange); text-transform: uppercase; margin-bottom: 16px;
+    }
+    h2 {
+      font-size: clamp(32px, 4vw, 48px);
+      font-weight: 900; line-height: 1.1; letter-spacing: -1.5px;
+      margin-bottom: 16px; color: var(--text);
+    }
+    .section-sub {
+      font-size: 18px; color: var(--text-muted); max-width: 560px;
+      line-height: 1.6; margin-bottom: 56px;
+    }
+    hr.section-divider {
+      border: none;
+      border-top: 1px solid rgba(255,107,43,0.1);
+      margin: 0;
+    }
+
+    /* ─── WHO IT'S FOR ────────────────────────────────────── */
+    .audience-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+    .audience-card {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 12px; padding: 28px;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .audience-card:hover {
+      border-color: rgba(255,107,43,0.35);
+      transform: translateY(-2px);
+    }
+    .audience-emoji { font-size: 32px; margin-bottom: 12px; display: block; }
+    .audience-title { font-size: 16px; font-weight: 700; margin-bottom: 8px; }
+    .audience-desc { font-size: 14px; color: var(--text-muted); line-height: 1.5; }
+
+    /* ─── HOW IT WORKS ────────────────────────────────────── */
+    .how-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+    }
+    @media (max-width: 768px) { .how-grid { grid-template-columns: 1fr; } }
+    .how-card {
+      background: var(--bg2); border: 1px solid var(--border);
+      border-radius: 12px; padding: 28px;
+      display: flex; gap: 20px;
+    }
+    .how-icon {
+      width: 44px; height: 44px; border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 20px; flex-shrink: 0;
+      background: rgba(255,107,43,0.1);
+    }
+    .how-title { font-size: 15px; font-weight: 700; margin-bottom: 6px; }
+    .how-desc { font-size: 14px; color: var(--text-muted); line-height: 1.5; }
+
+    /* ─── 18 DAYS TABLE ───────────────────────────────────── */
+    .weeks-container { display: flex; flex-direction: column; gap: 40px; }
+    .week-block {}
+    .week-header {
+      display: flex; align-items: center; gap: 16px; margin-bottom: 20px;
+    }
+    .week-pill {
+      padding: 4px 14px; border-radius: 100px;
+      font-size: 11px; font-weight: 700; letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+    .week-pill.w1 { background: rgba(255,107,43,0.1); color: var(--orange); border: 1px solid rgba(255,107,43,0.3); }
+    .week-pill.w2 { background: rgba(78,205,196,0.1); color: var(--teal); border: 1px solid rgba(78,205,196,0.3); }
+    .week-pill.w3 { background: rgba(255,215,0,0.1); color: var(--gold); border: 1px solid rgba(255,215,0,0.3); }
+    .week-title { font-size: 18px; font-weight: 700; }
+    .days-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 12px;
+    }
+    .day-card {
+      background: var(--bg2); border: 1px solid rgba(255,255,255,0.05);
+      border-radius: 10px; padding: 16px 20px;
+      display: flex; align-items: flex-start; gap: 14px;
+      transition: border-color 0.2s, background 0.2s;
+      text-decoration: none; color: inherit;
+    }
+    .day-card:hover {
+      border-color: var(--border);
+      background: rgba(255,107,43,0.03);
+    }
+    .day-num {
+      width: 32px; height: 32px; border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 12px; font-weight: 800; flex-shrink: 0;
+    }
+    .day-num.w1 { background: rgba(255,107,43,0.15); color: var(--orange); }
+    .day-num.w2 { background: rgba(78,205,196,0.15); color: var(--teal); }
+    .day-num.w3 { background: rgba(255,215,0,0.15); color: var(--gold); }
+    .day-content {}
+    .day-title { font-size: 14px; font-weight: 700; margin-bottom: 3px; }
+    .day-ship { font-size: 12px; color: var(--text-muted); line-height: 1.4; }
+
+    /* ─── MISSION QUOTE ───────────────────────────────────── */
+    .mission-section {
+      background: linear-gradient(135deg, rgba(255,107,43,0.04) 0%, rgba(78,205,196,0.03) 100%);
+      border: 1px solid rgba(255,107,43,0.1);
+      border-radius: 20px; padding: 72px 80px;
+      position: relative; overflow: hidden;
+    }
+    @media (max-width: 768px) { .mission-section { padding: 48px 32px; } }
+    .mission-quote-mark {
+      position: absolute; top: 32px; left: 48px;
+      font-size: 120px; font-family: Georgia, serif;
+      color: var(--orange); opacity: 0.08; line-height: 1;
+      pointer-events: none; user-select: none;
+    }
+    .mission-quote {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(20px, 2.5vw, 28px);
+      line-height: 1.6; color: var(--text);
+      font-weight: 400; font-style: italic;
+      max-width: 760px; margin-bottom: 32px;
+      position: relative; z-index: 1;
+    }
+    .mission-quote strong { color: var(--orange); font-style: normal; }
+    .mission-attr {
+      font-size: 14px; color: var(--text-muted); font-weight: 500;
+    }
+    .mission-pillars {
+      display: flex; flex-wrap: wrap; gap: 10px; margin-top: 40px;
+    }
+    .pillar-pill {
+      padding: 6px 16px; border-radius: 100px;
+      font-size: 12px; font-weight: 600;
+    }
+    .pillar-pill.p1 { background: rgba(255,107,43,0.1); color: var(--orange); border: 1px solid rgba(255,107,43,0.2); }
+    .pillar-pill.p2 { background: rgba(78,205,196,0.1); color: var(--teal); border: 1px solid rgba(78,205,196,0.2); }
+    .pillar-pill.p3 { background: rgba(167,139,250,0.1); color: var(--purple); border: 1px solid rgba(167,139,250,0.2); }
+    .pillar-pill.p4 { background: rgba(244,114,182,0.1); color: var(--pink); border: 1px solid rgba(244,114,182,0.2); }
+    .pillar-pill.p5 { background: rgba(255,215,0,0.1); color: var(--gold); border: 1px solid rgba(255,215,0,0.2); }
+
+    /* ─── BUILDER #N ──────────────────────────────────────── */
+    .builder-section {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 60px;
+      align-items: center;
+    }
+    @media (max-width: 900px) { .builder-section { grid-template-columns: 1fr; } }
+    .builder-left h2 { margin-bottom: 20px; }
+    .builder-left p { font-size: 16px; color: var(--text-muted); line-height: 1.7; margin-bottom: 24px; }
+    .builder-perks { display: flex; flex-direction: column; gap: 14px; }
+    .perk {
+      display: flex; align-items: flex-start; gap: 12px;
+    }
+    .perk-icon {
+      width: 28px; height: 28px; border-radius: 6px;
+      background: rgba(255,215,0,0.1);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 14px; flex-shrink: 0; margin-top: 1px;
+    }
+    .perk-text { font-size: 14px; color: var(--text-muted); line-height: 1.5; }
+    .perk-text strong { color: var(--text); }
+
+    /* Certificate card */
+    .cert-card {
+      background: linear-gradient(135deg, #0a0c14, #12172a);
+      border: 1.5px solid rgba(255,215,0,0.3);
+      border-radius: 16px; padding: 40px 36px;
+      position: relative; overflow: hidden;
+    }
+    .cert-card::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='20' height='20' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='10' cy='10' r='0.8' fill='%23FFD700' opacity='0.15'/%3E%3C/svg%3E");
+      opacity: 0.5;
+    }
+    .cert-inner { position: relative; z-index: 1; text-align: center; }
+    .cert-logo {
+      width: 56px; height: 56px; border-radius: 50%;
+      background: rgba(255,215,0,0.08);
+      border: 1px solid rgba(255,215,0,0.3);
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 20px; font-size: 20px; font-weight: 900;
+      color: var(--gold);
+    }
+    .cert-label {
+      font-size: 10px; letter-spacing: 3px; color: var(--text-dim);
+      text-transform: uppercase; margin-bottom: 8px;
+    }
+    .cert-certified { font-size: 13px; color: var(--text-muted); margin-bottom: 8px; font-style: italic; }
+    .cert-name {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 36px; font-weight: 700;
+      background: linear-gradient(90deg, #FFD700, #FFF4A0, #FF8C00);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text; margin-bottom: 8px;
+    }
+    .cert-desc { font-size: 13px; color: var(--text-muted); margin-bottom: 24px; line-height: 1.5; }
+    .cert-num-container {
+      display: inline-block;
+      background: rgba(255,215,0,0.06);
+      border: 1px solid rgba(255,215,0,0.3);
+      border-radius: 100px; padding: 8px 28px;
+    }
+    .cert-num-label { font-size: 9px; letter-spacing: 3px; color: var(--text-dim); text-transform: uppercase; display: block; margin-bottom: 2px; }
+    .cert-num {
+      font-size: 20px; font-weight: 900; letter-spacing: 2px;
+      background: linear-gradient(90deg, #FFD700, #FFF4A0, #FF8C00);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .cert-footer {
+      display: flex; justify-content: space-between; align-items: center;
+      margin-top: 24px; padding-top: 20px;
+      border-top: 1px solid rgba(255,215,0,0.1);
+    }
+    .cert-footer-item { font-size: 11px; color: var(--text-dim); }
+    .cert-footer-item strong { color: var(--text-muted); display: block; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; }
+
+    /* ─── FOUNDING 100 ────────────────────────────────────── */
+    .founding-banner {
+      background: linear-gradient(90deg, rgba(255,215,0,0.06), rgba(255,107,43,0.06));
+      border: 1px solid rgba(255,215,0,0.2);
+      border-radius: 16px; padding: 40px 48px;
+      display: flex; gap: 40px; align-items: center; flex-wrap: wrap;
+    }
+    .founding-number {
+      font-size: 72px; font-weight: 900; line-height: 1;
+      background: linear-gradient(90deg, var(--gold), #FF8C00);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text; flex-shrink: 0;
+    }
+    .founding-text h3 { font-size: 22px; font-weight: 800; margin-bottom: 8px; }
+    .founding-text p { font-size: 15px; color: var(--text-muted); line-height: 1.6; }
+
+    /* ─── GET STARTED ─────────────────────────────────────── */
+    .get-started-section {
+      text-align: center; padding: 100px 48px 120px;
+    }
+    .get-started-section h2 { font-size: clamp(36px, 5vw, 60px); margin-bottom: 20px; }
+    .get-started-section p { font-size: 18px; color: var(--text-muted); max-width: 480px; margin: 0 auto 40px; }
+    .get-started-section .btn-primary { font-size: 18px; padding: 18px 48px; }
+
+    /* ─── FOOTER ──────────────────────────────────────────── */
+    footer {
+      border-top: 1px solid rgba(255,107,43,0.08);
+      padding: 40px 48px; max-width: 1120px; margin: 0 auto;
+      display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;
+    }
+    footer a { color: var(--text-muted); text-decoration: none; font-size: 14px; transition: color 0.2s; }
+    footer a:hover { color: var(--text); }
+    .footer-links { display: flex; gap: 28px; flex-wrap: wrap; }
+    .footer-copy { font-size: 13px; color: var(--text-dim); }
+
+    /* ─── SCROLL FADE IN ──────────────────────────────────── */
+    .fade-in { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="/" class="nav-logo">One<span>Million</span></a>
+  <div class="nav-links">
+    <a href="#course">Course</a>
+    <a href="#mission">Mission</a>
+    <a href="#builders">Builders</a>
+    <a href="https://github.com/siddsdixit/onemillion-builder" target="_blank">GitHub</a>
+    <a href="cohort/README.md" class="nav-cta">Join Cohort →</a>
+  </div>
+</nav>
+
+<!-- ─── HERO ─────────────────────────────────────────────── -->
+<section class="hero">
+  <div class="hero-grid"></div>
+  <div class="hero-glow"></div>
+
+  <div class="hero-badge">
+    <span class="dot"></span>
+    Free · Open Source · For Everyone
+  </div>
+
+  <h1>
+    <span class="line1">Build ONE real</span>
+    <span class="line2">AI product.</span>
+    <span class="line3">18 days.</span>
+  </h1>
+
+  <p class="hero-sub">
+    Deployed to the internet. Real users. On your résumé.
+    Whether you're an EA who's never opened a terminal or an engineer who wants to master agentic SDLC —
+    this course ships you.
+  </p>
+
+  <div class="hero-ctas">
+    <a href="../week-1-foundation/day-01-vision/learn.md" class="btn-primary">Start Day 1 →</a>
+    <a href="../cohort/README.md" class="btn-secondary">Join a Live Cohort</a>
+  </div>
+
+  <div class="hero-stats">
+    <div class="stat">
+      <span class="stat-num">18</span>
+      <span class="stat-label">Days</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num">1–2h</span>
+      <span class="stat-label">Per Day</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num">~$10</span>
+      <span class="stat-label">Total Cost</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num">∞</span>
+      <span class="stat-label">Free Forever</span>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider"/>
+
+<!-- ─── WHO IT'S FOR ─────────────────────────────────────── -->
+<section class="fade-in">
+  <span class="section-label">Who This Is For</span>
+  <h2>Everyone. No exceptions.</h2>
+  <p class="section-sub">Zero prior experience required. If you can use Google Docs, you can build a real AI product.</p>
+
+  <div class="audience-grid">
+    <div class="audience-card">
+      <span class="audience-emoji">🗂️</span>
+      <div class="audience-title">Executive Assistants</div>
+      <p class="audience-desc">Never opened a terminal. We walk you through every single step. 1.5–2 hrs/day — honest estimate.</p>
+    </div>
+    <div class="audience-card">
+      <span class="audience-emoji">📋</span>
+      <div class="audience-title">Product Managers</div>
+      <p class="audience-desc">You've shipped specs. Now ship the product itself. 1–1.5 hrs/day. The spec skills transfer directly.</p>
+    </div>
+    <div class="audience-card">
+      <span class="audience-emoji">⚙️</span>
+      <div class="audience-title">Engineers</div>
+      <p class="audience-desc">You know how to code. Learn the 5-pillar agentic SDLC — the new way senior engineers build. 30–60 min/day.</p>
+    </div>
+    <div class="audience-card">
+      <span class="audience-emoji">🌱</span>
+      <div class="audience-title">Everyone Else</div>
+      <p class="audience-desc">Yoga teachers. Nurses. Retirees. Career-changers. Anyone with an idea deserves to build it. We mean it.</p>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider"/>
+
+<!-- ─── HOW IT WORKS ──────────────────────────────────────── -->
+<section class="fade-in">
+  <span class="section-label">How It Works</span>
+  <h2>Five files a day.<br/>Your AI does the build.</h2>
+  <p class="section-sub">You are the director. Claude Code (or Cursor, or any AI tool) is the builder. You spec, verify, and ship.</p>
+
+  <div class="how-grid">
+    <div class="how-card">
+      <div class="how-icon">📖</div>
+      <div>
+        <div class="how-title">Read the concept (learn.md)</div>
+        <p class="how-desc">~10–20 min. The mental model behind what you're building. Named examples. No jargon without definition.</p>
+      </div>
+    </div>
+    <div class="how-card">
+      <div class="how-icon">🔨</div>
+      <div>
+        <div class="how-title">Follow the build (build.md)</div>
+        <p class="how-desc">Step-by-step instructions. Every command has expected output. Every error has a fix. No "it should work."</p>
+      </div>
+    </div>
+    <div class="how-card">
+      <div class="how-icon">🤖</div>
+      <div>
+        <div class="how-title">Paste the verifier (ai-instructions.md)</div>
+        <p class="how-desc">Paste one prompt into your AI tool. Claude reads your project, runs checks, reports pass or needs revision.</p>
+      </div>
+    </div>
+    <div class="how-card">
+      <div class="how-icon">🎬</div>
+      <div>
+        <div class="how-title">Watch Sid do it (loom.md)</div>
+        <p class="how-desc">A 10–15 min screen recording per day. Sid hits the same errors you'll hit. He leaves the mistakes in.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider"/>
+
+<!-- ─── 18 DAYS ───────────────────────────────────────────── -->
+<section id="course" class="fade-in">
+  <span class="section-label">The Course</span>
+  <h2>18 days. One real product.</h2>
+  <p class="section-sub">Each day builds on the last. No skipping ahead — every day produces a working artifact you'll use tomorrow.</p>
+
+  <div class="weeks-container">
+
+    <!-- Week 1 -->
+    <div class="week-block">
+      <div class="week-header">
+        <span class="week-pill w1">Week 1</span>
+        <span class="week-title">Foundation — a real app with auth, deployed</span>
+      </div>
+      <div class="days-grid">
+        <a href="../week-1-foundation/day-01-vision/learn.md" class="day-card">
+          <div class="day-num w1">1</div>
+          <div class="day-content">
+            <div class="day-title">Vision + Mental Map</div>
+            <div class="day-ship">Pick your product · mental map locked</div>
+          </div>
+        </a>
+        <a href="../week-1-foundation/day-02-problem/learn.md" class="day-card">
+          <div class="day-num w1">2</div>
+          <div class="day-content">
+            <div class="day-title">Problem + Mom Test</div>
+            <div class="day-ship">3 real conversations · evidence-backed pain</div>
+          </div>
+        </a>
+        <a href="../week-1-foundation/day-03-prd/learn.md" class="day-card">
+          <div class="day-num w1">3</div>
+          <div class="day-content">
+            <div class="day-title">Write Your PRD</div>
+            <div class="day-ship">Locked PRD · 5 sections · scope frozen</div>
+          </div>
+        </a>
+        <a href="../week-1-foundation/day-04-stack/learn.md" class="day-card">
+          <div class="day-num w1">4</div>
+          <div class="day-content">
+            <div class="day-title">Stack + First Deploy</div>
+            <div class="day-ship">Live at yourapp.vercel.app</div>
+          </div>
+        </a>
+        <a href="../week-1-foundation/day-05-auth/learn.md" class="day-card">
+          <div class="day-num w1">5</div>
+          <div class="day-content">
+            <div class="day-title">Auth + Database</div>
+            <div class="day-ship">Signup → login · Row Level Security on</div>
+          </div>
+        </a>
+        <a href="../week-1-foundation/day-06-core-feature/learn.md" class="day-card">
+          <div class="day-num w1">6</div>
+          <div class="day-content">
+            <div class="day-title">Core Feature</div>
+            <div class="day-ship">Full CRUD working end-to-end, live</div>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <!-- Week 2 -->
+    <div class="week-block">
+      <div class="week-header">
+        <span class="week-pill w2">Week 2</span>
+        <span class="week-title">Make It AI — real Claude output in your product</span>
+      </div>
+      <div class="days-grid">
+        <a href="../week-2-make-it-ai/day-07-ai-spec/learn.md" class="day-card">
+          <div class="day-num w2">7</div>
+          <div class="day-content">
+            <div class="day-title">AI Feature Spec</div>
+            <div class="day-ship">Pattern A/B/C locked · quality criteria set</div>
+          </div>
+        </a>
+        <a href="../week-2-make-it-ai/day-08-first-ai-call/learn.md" class="day-card">
+          <div class="day-num w2">8</div>
+          <div class="day-content">
+            <div class="day-title">First AI Call</div>
+            <div class="day-ship">Real Claude output flowing into your app</div>
+          </div>
+        </a>
+        <a href="../week-2-make-it-ai/day-09-streaming/learn.md" class="day-card">
+          <div class="day-num w2">9</div>
+          <div class="day-content">
+            <div class="day-title">Streaming UI</div>
+            <div class="day-ship">Tokens appearing live in your browser</div>
+          </div>
+        </a>
+        <a href="../week-2-make-it-ai/day-10-tool-use/learn.md" class="day-card">
+          <div class="day-num w2">10</div>
+          <div class="day-content">
+            <div class="day-title">Tool Use</div>
+            <div class="day-ship">AI takes real actions in your database</div>
+          </div>
+        </a>
+        <a href="../week-2-make-it-ai/day-11-rag/learn.md" class="day-card">
+          <div class="day-num w2">11</div>
+          <div class="day-content">
+            <div class="day-title">RAG</div>
+            <div class="day-ship">AI personalized to each user's real data</div>
+          </div>
+        </a>
+        <a href="../week-2-make-it-ai/day-12-lock-the-ai/learn.md" class="day-card">
+          <div class="day-num w2">12</div>
+          <div class="day-content">
+            <div class="day-title">Lock the AI</div>
+            <div class="day-ship">Acceptance tests · cost budget · rate limit</div>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <!-- Week 3 -->
+    <div class="week-block">
+      <div class="week-header">
+        <span class="week-pill w3">Week 3</span>
+        <span class="week-title">Ship &amp; Sell — production-ready, real users</span>
+      </div>
+      <div class="days-grid">
+        <a href="../week-3-ship-and-sell/day-13-hygiene/learn.md" class="day-card">
+          <div class="day-num w3">13</div>
+          <div class="day-content">
+            <div class="day-title">Production Hygiene</div>
+            <div class="day-ship">9-point audit · secrets · RLS · rate limits</div>
+          </div>
+        </a>
+        <a href="../week-3-ship-and-sell/day-14-domain/learn.md" class="day-card">
+          <div class="day-num w3">14</div>
+          <div class="day-content">
+            <div class="day-title">Custom Domain</div>
+            <div class="day-ship">yourapp.com live with automatic SSL</div>
+          </div>
+        </a>
+        <a href="../week-3-ship-and-sell/day-15-monitoring/learn.md" class="day-card">
+          <div class="day-num w3">15</div>
+          <div class="day-content">
+            <div class="day-title">Monitoring</div>
+            <div class="day-ship">Sentry + Vercel Analytics + UptimeRobot</div>
+          </div>
+        </a>
+        <a href="../week-3-ship-and-sell/day-16-landing/learn.md" class="day-card">
+          <div class="day-num w3">16</div>
+          <div class="day-content">
+            <div class="day-title">Landing Page</div>
+            <div class="day-ship">Hero · Problem · Solution · Proof · CTA</div>
+          </div>
+        </a>
+        <a href="../week-3-ship-and-sell/day-17-first-users/learn.md" class="day-card">
+          <div class="day-num w3">17</div>
+          <div class="day-content">
+            <div class="day-title">First 10 Users</div>
+            <div class="day-ship">1 real user · real feedback documented</div>
+          </div>
+        </a>
+        <a href="../week-3-ship-and-sell/day-18-demo/learn.md" class="day-card">
+          <div class="day-num w3">18</div>
+          <div class="day-content">
+            <div class="day-title">Demo Day → Builder #N</div>
+            <div class="day-ship">5-min Loom · your permanent Builder number</div>
+          </div>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<hr class="section-divider"/>
+
+<!-- ─── MISSION ───────────────────────────────────────────── -->
+<section id="mission" class="fade-in">
+  <span class="section-label">The Mission</span>
+  <div class="mission-section">
+    <div class="mission-quote-mark">"</div>
+    <blockquote class="mission-quote">
+      The skill of building with AI cannot become a class signal. It cannot be a gated credential.
+      It must be a baseline — available to <strong>anyone, anywhere</strong>, with a laptop and the will to learn.
+      That's why OneMillion is on GitHub, MIT licensed, with no upsells, no premium tier, no certificate fee.
+      <strong>The cohorts are free. The verification is free. The Builder number is free. Forever.</strong>
+    </blockquote>
+    <p class="mission-attr">— Sid Dixit, <a href="../MANIFESTO.md" style="color: var(--orange); text-decoration: none;">The Age of Agentic Engineering</a></p>
+
+    <div class="mission-pillars">
+      <span class="pillar-pill p1">Spec before code</span>
+      <span class="pillar-pill p2">Multi-agent decomposition</span>
+      <span class="pillar-pill p3">Validation gates</span>
+      <span class="pillar-pill p4">Production hygiene from day 1</span>
+      <span class="pillar-pill p5">The human review loop</span>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider"/>
+
+<!-- ─── BUILDER #N ────────────────────────────────────────── -->
+<section id="builders" class="fade-in">
+  <div class="builder-section">
+    <div class="builder-left">
+      <span class="section-label">Certification</span>
+      <h2>Become a Builder.<br/>Keep your number forever.</h2>
+      <p>
+        Complete all 18 days, pass all 18 verifications, and receive your
+        Builder number — sequential, permanent, and publicly listed at onemillion.build/builders.
+        No fee. No expiry. No catch.
+      </p>
+      <div class="builder-perks">
+        <div class="perk">
+          <div class="perk-icon">🏆</div>
+          <div class="perk-text"><strong>Permanent Builder profile</strong> — public page with your product, demo Loom, and 18-day commit history.</div>
+        </div>
+        <div class="perk">
+          <div class="perk-icon">🔗</div>
+          <div class="perk-text"><strong>LinkedIn badge</strong> — verifiable credential that links back to your public Builder profile.</div>
+        </div>
+        <div class="perk">
+          <div class="perk-icon">⭐</div>
+          <div class="perk-text"><strong>First 100 builders</strong> get Founding Builder status: Sid's personal Slack + intro to one investor or hiring manager.</div>
+        </div>
+        <div class="perk">
+          <div class="perk-icon">📜</div>
+          <div class="perk-text"><strong>PDF certificate</strong> — downloadable, shareable, signed by Sid.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Certificate preview card -->
+    <div class="cert-card">
+      <div class="cert-inner">
+        <div class="cert-logo">1M</div>
+        <div class="cert-label">Certificate of Completion</div>
+        <div class="cert-certified">This certifies that</div>
+        <div class="cert-name">Sid Dixit</div>
+        <div class="cert-desc">
+          has built a real AI-native SaaS product and completed<br/>
+          all 18 days of <em>OneMillion: Build in 18 Days</em>
+        </div>
+        <div class="cert-num-container">
+          <span class="cert-num-label">Founding Builder</span>
+          <span class="cert-num">#0000001</span>
+        </div>
+        <div class="cert-footer">
+          <div class="cert-footer-item">
+            <strong>Date Issued</strong>
+            2026
+          </div>
+          <div class="cert-footer-item" style="text-align:center;">✦</div>
+          <div class="cert-footer-item" style="text-align:right;">
+            <strong>Verify At</strong>
+            onemillion.build
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider"/>
+
+<!-- ─── FOUNDING 100 ──────────────────────────────────────── -->
+<section class="fade-in">
+  <div class="founding-banner">
+    <div class="founding-number">100</div>
+    <div class="founding-text">
+      <h3>Founding Builders — almost gone</h3>
+      <p>
+        The first 100 people to complete the course get permanent Founding Builder status.
+        That means Sid's personal Slack access, an intro to one investor or hiring manager on graduation,
+        and a Founding Builder badge that distinguishes you on the Builder Wall forever.
+        There is no second batch of Founding Builders.
+      </p>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider"/>
+
+<!-- ─── GET STARTED ───────────────────────────────────────── -->
+<div class="get-started-section fade-in">
+  <h2>The build starts now.</h2>
+  <p>Pick your product. Write your PRD. Ship something real.</p>
+  <a href="../getting-started.md" class="btn-primary">Get Started → Day 0</a>
+</div>
+
+<!-- ─── FOOTER ────────────────────────────────────────────── -->
+<footer>
+  <div class="footer-links">
+    <a href="../MANIFESTO.md">Manifesto</a>
+    <a href="../FAQ.md">FAQ</a>
+    <a href="../cost-transparency.md">Cost Transparency</a>
+    <a href="../cohort/README.md">Live Cohorts</a>
+    <a href="https://github.com/siddsdixit/onemillion-builder" target="_blank">GitHub</a>
+    <a href="https://linkedin.com/in/siddharthdixit" target="_blank">Sid on LinkedIn</a>
+  </div>
+  <div class="footer-copy">MIT License · Free forever · #BuildingWith1M</div>
+</footer>
+
+<script>
+  // Scroll-triggered fade-in
+  const observer = new IntersectionObserver(
+    entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }),
+    { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
+  );
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
